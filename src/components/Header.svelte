@@ -18,7 +18,7 @@
 </script>
 
 <header
-	class={'sticky top-0 z-[10] flex items-center justify-between rounded-full border border-solid px-6 duration-600' +
+	class={'sticky top-0 z-[10] flex items-center justify-between rounded-b-2xl border-r border-b border-l border-solid px-6 duration-600' +
 		(y > 0 ? ' border-orange-900 bg-slate-950 py-4' : ' border-transparent bg-transparent py-6')}
 >
 	<h1 class="font-medium">
