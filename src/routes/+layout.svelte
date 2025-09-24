@@ -9,11 +9,10 @@
 	let innerWidth: number = 0;
 </script>
 
+<GoTopArrow {y} />
 <div
-	class="relative container mx-auto flex min-h-screen w-full max-w-screen flex-col text-sm sm:text-base"
+	class="max-w-1400px relative container mx-auto flex min-h-screen w-full flex-col text-sm sm:text-base"
 >
-	<GoTopArrow {y} />
-
 	<Header {y} />
 	<slot />
 	<Footer />

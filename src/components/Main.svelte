@@ -16,7 +16,7 @@
 		{
 			name: 'a product design and ux fanatic',
 			description:
-				'As a developer and a user, the interaction needs to be pleasen and enjoyable with minimal friction. This for me, is a big part of finding a good solution.'
+				'As a developer and a user, the interaction needs to be pleasent and enjoyable with minimal friction. This for me, is a big part of finding a good solution.'
 		},
 		{
 			name: 'an excellent communicator',
@@ -31,7 +31,7 @@
 		<div class="flex flex-col gap-6 text-center md:gap-8 lg:justify-center lg:gap-10 lg:text-left">
 			<h2 class="text-4xl font-semibold sm:text-5xl md:text-6xl">
 				Hi! I'm <span class="poppins text-orange-400">Chris</span> Nielsen <br />
-				A Selftaught <span class="poppins text-orange-400">Developer</span>
+				A Self-taught <span class="poppins text-orange-400">Developer</span>
 			</h2>
 			<p class="text-base sm:text-lg md:text-xl">
 				My <span class="poppins text-orange-400"> favorite tech</span> includes Python, Golang, SQLite,
@@ -40,7 +40,7 @@
 			<a
 				href="blank"
 				target="_blank"
-				class="blueShadow poppins group relative mx-auto cursor-pointer overflow-hidden rounded-full bg-white px-6 py-3 text-base text-slate-950 sm:text-lg md:text-xl lg:mr-auto lg:ml-0"
+				class="poppins group relative mx-auto cursor-pointer overflow-hidden rounded-full bg-white px-6 py-3 text-base text-slate-950 sm:text-lg md:text-xl lg:mr-auto lg:ml-0"
 			>
 				<div
 					class="absolute top-0 right-full z-0 h-full w-full bg-orange-500 opacity-85 duration-200 group-hover:translate-x-full"
@@ -49,7 +49,12 @@
 			>
 		</div>
 		<div class="relative grid place-items-center shadow-2xl">
-			<img src="images/profile.png" alt="A Foto of me" class="z-[2] max-h-[70vh] object-cover" />
+			<img
+				src="images/profile.png"
+				alt="Chris Nielsen"
+				class="z-[2] max-h-[70vh] object-cover"
+				loading="lazy"
+			/>
 		</div>
 	</section>
 
@@ -65,7 +70,7 @@
 			target="_blank"
 			class="mx-auto -mt-10 -mb-4 flex items-center gap-2 rounded-md border border-solid border-white px-4 py-2 duration-200 hover:border-orange-700 sm:-mb-0"
 			><i class="fa-regular fa-circle-play"></i>
-			<p>Whatch the video</p>
+			<p>Watch the video</p>
 		</a>
 		<div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-10">
 			<Step step={steps[0]}>
