@@ -12,12 +12,8 @@
 <div
 	class="relative container mx-auto flex min-h-screen w-full max-w-screen flex-col text-sm sm:text-base"
 >
-	<div
-		class={'fixed bottom-0 z-[10] flex w-full p-10 duration-200 ' +
-			(y > 0 ? ' opacity-full pointer-events-auto' : ' pointer-events-none opacity-0')}
-	>
-		<GoTopArrow />
-	</div>
+	<GoTopArrow {y} />
+
 	<Header {y} />
 	<slot />
 	<Footer />
