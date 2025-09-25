@@ -2,9 +2,63 @@
 	import Step from './Step.svelte';
 
 	let steps = [
-		{ name: 'Smoljames Store', icon: 'fa-solid fa-cart-shopping' },
-		{ name: 'Ultimate ToDos', icon: 'fa-solid fa-list-check' },
-		{ name: 'Pokedex', icon: 'fa-solid fa-diagram-project' }
+		{
+			title: 'DocsAutomation',
+			descriptionShort:
+				'A desktop app that automated filling out 20+ recurring Word documents while maintaining a required folder structure.',
+			links: [{ label: 'GitHub', url: 'https://github.com/Rodhor/DocsAutomation' }],
+			icon: 'fa-solid fa-file-word',
+			technologies: ['Python', 'CustomTKinter', 'PyInstaller', 'Word']
+		},
+		{
+			title: 'WordTemplateScript',
+			descriptionShort: 'A lightweight script for filling Word templates with data from Excel.',
+			links: [{ label: 'GitHub', url: 'https://github.com/Rodhor/WordTemplateScript' }],
+			icon: 'fa-solid fa-file-word',
+			technologies: ['Python', 'Word', 'Excel']
+		},
+		{
+			title: 'Project Automation',
+			descriptionShort: 'Automation scripts to simplify creating and setting up new projects.',
+			links: [
+				{ label: 'GitHub (Python)', url: 'https://github.com/Rodhor/Project_Automation-Python-' },
+				{ label: 'GitHub (Bash)', url: 'https://github.com/Rodhor/Project_Automation-Bash-' }
+			],
+			icon: 'fa-solid fa-gears',
+			technologies: ['Python', 'Bash', 'VBA']
+		},
+		{
+			title: 'GolangProjectAutomation',
+			descriptionShort:
+				'A paused in-progress project automation tool built in Go, aiming for distributable executables with embedded filestructure templates.',
+			links: [{ label: 'GitHub', url: 'https://github.com/Rodhor/GolangProjectAutomation' }],
+			icon: 'fa-solid fa-gears',
+			technologies: ['Go', 'YAML']
+		},
+		{
+			title: 'RandomInfoGenerator',
+			descriptionShort:
+				'A Streamlit web app for generating synthetic datasets for testing and developing.',
+			links: [{ label: 'GitHub', url: 'https://github.com/Rodhor/RandomInfoGenerator' }],
+			icon: 'fa-solid fa-database',
+			technologies: ['Python', 'Streamlit', 'Faker', 'Pandas']
+		},
+		{
+			title: 'FriendsApp',
+			descriptionShort:
+				'A CRUD app for managing friends, built with a separate frontend and backend.',
+			links: [{ label: 'GitHub', url: 'https://github.com/Rodhor/FriendsApp' }],
+			icon: 'fa-solid fa-user-group',
+			technologies: ['JavaScript', 'Python']
+		},
+		{
+			title: 'CDP',
+			descriptionShort:
+				'A Bashscript to streamline navigating project directories and opening them in VSCode.',
+			links: [{ label: 'GitHub', url: 'https://github.com/Rodhor/CDP' }],
+			icon: 'fa-solid fa-terminal',
+			technologies: ['Bash']
+		}
 	];
 
 	let benefits = [
@@ -73,30 +127,9 @@
 			<p>Watch the video</p>
 		</a>
 		<div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-10">
-			<Step step={steps[0]}>
-				<p>
-					Smoljames Store is a merchandising store created with <strong class="text-orange-400"
-						>Next.js Commerce.js Stripe & Node.js + Express.js!</strong
-					>
-					Commerce.js is a product CMS and Stripe is used for all transaction handling.
-				</p>
-			</Step>
-			<Step step={steps[1]}>
-				<p>
-					Ultimate ToDos is a Full Stack <strong class="text-orange-400"
-						>Next.js, Node.js + Express.js & Firebase</strong
-					> CRUD application that allows a user to login, manage a tidy efficatious todo list, and persist
-					this information across devices.
-				</p>
-			</Step>
-			<Step step={steps[2]}>
-				<p>
-					The Pokedex is a <strong class="text-orange-400">SvelteKit and Tailwindcss</strong>
-					web application hostet on <strong class="text-orange-400">Netlify</strong> that consumes
-					and caches the <strong class="text-orange-400">Pokemon API</strong> to display all pokemon
-					information. Gotta catch em All!
-				</p>
-			</Step>
+			{#each steps as step, i}
+				<Step {step}></Step>
+			{/each}
 		</div>
 	</section>
 
