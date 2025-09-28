@@ -1,4 +1,5 @@
 <script lang="ts">
+	import StepModal from './stepModal.svelte';
 	import Step from './Step.svelte';
 
 	let steps = [
@@ -222,4 +223,8 @@
 		</div>
 		<p class="mx-auto">So why not invest?</p>
 	</section>
+
+	<div class="m-auto">
+		<StepModal />
+	</div>
 </main>
