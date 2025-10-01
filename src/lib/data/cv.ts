@@ -1,4 +1,4 @@
-import cvJson from "./cv.json";
+import cvJson from '$lib/data/cv.json';
 
 /**
  * ---------------------------------------------------------------------
@@ -11,8 +11,8 @@ import cvJson from "./cv.json";
 type Lang = keyof LocalizedString;
 
 interface LocalizedString {
-  en: string;
-  de: string;
+	en: string;
+	de: string;
 }
 
 /**
@@ -23,25 +23,25 @@ interface LocalizedString {
  * - They keep LocalizedString fields (e.g., position, degree) intact.
  */
 interface JSONWorkPlace {
-  organization: string;
-  location: string;
-  position: LocalizedString;
-  startDate: string;
-  endDate?: string;
-  descriptionShort: LocalizedString;
-  descriptionLong: LocalizedString;
-  highlights?: LocalizedString[];
+	organization: string;
+	location: string;
+	position: LocalizedString;
+	startDate: string;
+	endDate?: string;
+	descriptionShort: LocalizedString;
+	descriptionLong: LocalizedString;
+	highlights?: LocalizedString[];
 }
 
 interface JSONEducation {
-  organization: string;
-  location: string;
-  fieldOfStudy: LocalizedString;
-  degree: LocalizedString;
-  startDate: string;
-  endDate?: string;
-  descriptionShort: LocalizedString;
-  descriptionLong: LocalizedString;
+	organization: string;
+	location: string;
+	fieldOfStudy: LocalizedString;
+	degree: LocalizedString;
+	startDate: string;
+	endDate?: string;
+	descriptionShort: LocalizedString;
+	descriptionLong: LocalizedString;
 }
 
 /**
@@ -53,25 +53,25 @@ interface JSONEducation {
  *   into plain strings in the selected language.
  */
 interface LocalizedWorkPlace {
-  organization: string;
-  location: string;
-  position: string;
-  startDate: string;
-  endDate?: string;
-  descriptionShort: string;
-  descriptionLong: string;
-  highlights: string[];
+	organization: string;
+	location: string;
+	position: string;
+	startDate: string;
+	endDate?: string;
+	descriptionShort: string;
+	descriptionLong: string;
+	highlights: string[];
 }
 
 interface LocalizedEducation {
-  organization: string;
-  location: string;
-  fieldOfStudy: string;
-  degree: string;
-  startDate: string;
-  endDate?: string;
-  descriptionShort: string;
-  descriptionLong: string;
+	organization: string;
+	location: string;
+	fieldOfStudy: string;
+	degree: string;
+	startDate: string;
+	endDate?: string;
+	descriptionShort: string;
+	descriptionLong: string;
 }
 
 /**
@@ -97,30 +97,30 @@ const education: JSONEducation[] = cvJson.education;
  * - Converts highlights array into a plain string[] for the chosen language.
  */
 export function getWorkspaceByLanguage(lang: Lang): LocalizedWorkPlace[] {
-  return workplaces.map((wp) => ({
-    organization: wp.organization,
-    location: wp.location,
-    position: wp.position[lang],
-    startDate: wp.startDate,
-    endDate: wp.endDate,
-    descriptionShort: wp.descriptionShort[lang],
-    descriptionLong: wp.descriptionLong[lang],
-    highlights: wp.highlights?.map((h) => h[lang]) ?? [],
-  }));
+	return workplaces.map((wp) => ({
+		organization: wp.organization,
+		location: wp.location,
+		position: wp.position[lang],
+		startDate: wp.startDate,
+		endDate: wp.endDate,
+		descriptionShort: wp.descriptionShort[lang],
+		descriptionLong: wp.descriptionLong[lang],
+		highlights: wp.highlights?.map((h) => h[lang]) ?? []
+	}));
 }
 
 /**
  * Transform education entries into a language-specific representation.
  */
 export function getEducationByLanguage(lang: Lang): LocalizedEducation[] {
-  return education.map((e) => ({
-    organization: e.organization,
-    location: e.location,
-    startDate: e.startDate,
-    endDate: e.endDate,
-    descriptionShort: e.descriptionShort[lang],
-    descriptionLong: e.descriptionLong[lang],
-    fieldOfStudy: e.fieldOfStudy[lang],
-    degree: e.degree[lang],
-  }));
+	return education.map((e) => ({
+		organization: e.organization,
+		location: e.location,
+		startDate: e.startDate,
+		endDate: e.endDate,
+		descriptionShort: e.descriptionShort[lang],
+		descriptionLong: e.descriptionLong[lang],
+		fieldOfStudy: e.fieldOfStudy[lang],
+		degree: e.degree[lang]
+	}));
 }

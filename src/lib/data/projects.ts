@@ -1,4 +1,4 @@
-import projectJson from "./projects.json";
+import projectJson from '$lib/data/projects.json';
 
 /**
  * ---------------------------------------------------------------------
@@ -11,8 +11,8 @@ import projectJson from "./projects.json";
 type Lang = keyof LocalizedString;
 
 interface LocalizedString {
-  en: string;
-  de: string;
+	en: string;
+	de: string;
 }
 
 /**
@@ -23,17 +23,17 @@ interface LocalizedString {
  * - LocalizedString is used for multi-language text fields.
  */
 interface Link {
-  label: string;
-  url: string;
+	label: string;
+	url: string;
 }
 
 interface JSONProject {
-  title: LocalizedString;
-  descriptionShort: LocalizedString;
-  descriptionLong: LocalizedString;
-  technologies: string[];
-  links: Link[];
-  icon: string;
+	title: LocalizedString;
+	descriptionShort: LocalizedString;
+	descriptionLong: LocalizedString;
+	technologies: string[];
+	links: Link[];
+	icon: string;
 }
 
 /**
@@ -45,12 +45,12 @@ interface JSONProject {
  *   into plain strings in the selected language.
  */
 interface LocalizedProject {
-  title: string;
-  descriptionShort: string;
-  descriptionLong: string;
-  technologies: string[];
-  links: Link[];
-  icon: string;
+	title: string;
+	descriptionShort: string;
+	descriptionLong: string;
+	technologies: string[];
+	links: Link[];
+	icon: string;
 }
 
 /**
@@ -73,12 +73,12 @@ const projects: JSONProject[] = projectJson.projects;
  * - Returns a clean LocalizedProject[].
  */
 export function getProjectsByLanguage(lang: Lang): LocalizedProject[] {
-  return projects.map((p) => ({
-    title: p.title[lang],
-    descriptionShort: p.descriptionShort[lang],
-    descriptionLong: p.descriptionLong[lang],
-    technologies: p.technologies,
-    links: p.links,
-    icon: p.icon,
-  }));
+	return projects.map((p) => ({
+		title: p.title[lang],
+		descriptionShort: p.descriptionShort[lang],
+		descriptionLong: p.descriptionLong[lang],
+		technologies: p.technologies,
+		links: p.links,
+		icon: p.icon
+	}));
 }
