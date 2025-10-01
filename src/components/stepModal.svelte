@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { scale, fade } from 'svelte/transition';
-	export let projects
+	import { scale } from 'svelte/transition';
+	export let projects;
 
 	let stepModal: HTMLDialogElement;
 	let isVisible = false;
@@ -8,7 +8,6 @@
 
 	// Animation durations
 	const SCALE_IN = 300;
-	const FADE_IN = 400;
 
 	export function openModal(index: number) {
 		activeIndex = index;
@@ -18,9 +17,9 @@
 
 	function closeModal() {
 		isVisible = false;
-		
-		activeIndex = null
-		stepModal.close()
+
+		activeIndex = null;
+		stepModal.close();
 	}
 
 	function handleBackdropClick(event: MouseEvent) {
@@ -34,17 +33,16 @@
 	}
 </script>
 
-<!-- Modal -->
 <dialog
 	bind:this={stepModal}
 	on:click={handleBackdropClick}
-	class="m-auto bg-transparent outline-none focus:outline-none backdrop:backdrop-blur-sm"
+	class="m-auto bg-transparent outline-none backdrop:backdrop-blur-sm focus:outline-none"
 >
 	{#if isVisible && activeIndex !== null}
 		<!-- Modal Content -->
 		<div
 			in:scale={{ duration: SCALE_IN }}
-			class="relative z-10 max-w-2xl rounded-xl bg-slate-950 p-6 shadow-xl "
+			class="relative z-10 max-w-2xl rounded-xl bg-slate-950 p-6 shadow-xl"
 		>
 			<!-- Title -->
 			<h2 class="mb-4 text-xl font-bold text-white sm:text-2xl lg:text-3xl">
@@ -84,7 +82,7 @@
 			<!-- Close button -->
 			<button
 				on:click={closeModal}
-				class="absolute top-3 right-3 rounded-full bg-gray-200 px-2 py-0.5 text-xs hover:bg-gray-300 sm:top-4 sm:right-4 sm:text-sm lg:text-base"
+				class="absolute right-3 top-3 rounded-full bg-gray-200 px-2 py-0.5 text-xs hover:bg-gray-300 sm:right-4 sm:top-4 sm:text-sm lg:text-base"
 			>
 				✕
 			</button>
