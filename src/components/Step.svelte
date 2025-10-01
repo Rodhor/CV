@@ -1,5 +1,7 @@
 <script lang="ts">
 	export let project;
+	export let index: number
+	export let openModal: (index: number) => void;
 
 	const techIcons: Record<string, string> = {
 		python: 'python.svg',
@@ -21,7 +23,7 @@
 	const githubLinks = project.links.filter((l: any) => l.url.toLowerCase().includes('github.com'));
 </script>
 
-<div
+<div on:click={() => openModal(index)}
 	class="group flex cursor-pointer flex-col gap-4 rounded-lg border border-violet-700 p-4 text-center duration-200 hover:border-violet-400 sm:p-6 md:p-8"
 >
 	<div
@@ -45,6 +47,7 @@
 			{#if githubLinks.length === 1}
 				<!-- single github link -->
 				<a
+				on:click|stopPropagation 
 					href={githubLinks[0].url}
 					target="_blank"
 					rel="noopener noreferrer"
@@ -58,6 +61,7 @@
 				<!-- multiple github links -->
 				{#each githubLinks as link}
 					<a
+					on:click|stopPropagation 
 						href={link.url}
 						target="_blank"
 						rel="noopener noreferrer"

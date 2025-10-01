@@ -5,6 +5,17 @@
 	import { getProjectsByLanguage } from '$lib/data/projects';
 
 	let projects = getProjectsByLanguage('en')
+	let modalRef: any
+
+
+	function handleOpenModal(index: number) {
+		modalRef.openModal(index)
+	}
+
+
+
+
+
 	let benefits = [
 		{
 			name: 'a selftaught developer',
@@ -63,11 +74,12 @@
 			</h3>
 		</div>
 		<div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-10">
-			{#each projects as project}
-				<Step {project}></Step>
+			{#each projects as project, index}
+				<Step {project} index={index} openModal={handleOpenModal}></Step>
 			{/each}
 		</div>
 	</section>
+	<StepModal bind:this={modalRef} {projects} />
 
 	<section
 		id="about"
@@ -158,8 +170,4 @@
 		</div>
 		<p class="mx-auto">So why not invest?</p>
 	</section>
-
-	<div class="m-auto">
-		<StepModal />
-	</div>
 </main>
