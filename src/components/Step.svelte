@@ -1,6 +1,6 @@
 <script lang="ts">
 	export let project;
-	export let index: number
+	export let index: number;
 	export let openModal: (index: number) => void;
 
 	const techIcons: Record<string, string> = {
@@ -23,15 +23,18 @@
 	const githubLinks = project.links.filter((l: any) => l.url.toLowerCase().includes('github.com'));
 </script>
 
-<div on:click={() => openModal(index)}
+<button
+	on:click={() => openModal(index)}
 	class="group flex cursor-pointer flex-col gap-4 rounded-lg border border-violet-700 p-4 text-center duration-200 hover:border-violet-400 sm:p-6 md:p-8"
 >
 	<div
 		class="mx-auto -mt-10 grid place-items-center bg-slate-950 px-4 text-5xl duration-200 sm:-mt-12 md:-mt-14 md:text-6xl lg:-mt-16"
 	>
-		<i class={project.icon} />
+		<i class={project.icon}></i>
 	</div>
-	<h3 class="text-xl font-medium sm:text-2xl md:text-3xl">{project.title}</h3>
+	<h3 class="break-normal text-xl font-medium leading-tight sm:text-2xl md:text-3xl">
+		{project.title}
+	</h3>
 	<p>
 		{project.descriptionShort}
 	</p>
@@ -47,7 +50,7 @@
 			{#if githubLinks.length === 1}
 				<!-- single github link -->
 				<a
-				on:click|stopPropagation 
+					on:click|stopPropagation
 					href={githubLinks[0].url}
 					target="_blank"
 					rel="noopener noreferrer"
@@ -61,7 +64,7 @@
 				<!-- multiple github links -->
 				{#each githubLinks as link}
 					<a
-					on:click|stopPropagation 
+						on:click|stopPropagation
 						href={link.url}
 						target="_blank"
 						rel="noopener noreferrer"
@@ -75,4 +78,4 @@
 			{/if}
 		</div>
 	</div>
-</div>
+</button>

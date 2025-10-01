@@ -2,8 +2,8 @@
 	"projects": [
 		{
 			"title": {
-				"en": "DocsAutomation",
-				"de": "DocsAutomation"
+				"en": "Docs Automation",
+				"de": "Docs Automation"
 			},
 			"descriptionShort": {
 				"en": "A desktop app that automated filling out 20+ recurring Word documents while maintaining a required folder structure.",
@@ -24,8 +24,8 @@
 		},
 		{
 			"title": {
-				"en": "WordTemplateScript",
-				"de": "WordTemplateScript"
+				"en": "WordTemplate Script",
+				"de": "WordTemplate Script"
 			},
 			"descriptionShort": {
 				"en": "A lightweight script for filling Word templates with data from Excel.",
@@ -72,8 +72,8 @@
 		},
 		{
 			"title": {
-				"en": "GolangProjectAutomation",
-				"de": "GolangProjectAutomation"
+				"en": "Golang Project Automation",
+				"de": "Golang Project Automation"
 			},
 			"descriptionShort": {
 				"en": "A paused in-progress project automation tool built in Go, aiming for distributable executables with embedded filestructure templates.",
@@ -94,8 +94,8 @@
 		},
 		{
 			"title": {
-				"en": "RandomInfoGenerator",
-				"de": "RandomInfoGenerator"
+				"en": "Random Info Generator",
+				"de": "Random Info Generator"
 			},
 			"descriptionShort": {
 				"en": "A Streamlit web app for generating synthetic datasets for testing and developing.",
@@ -116,8 +116,8 @@
 		},
 		{
 			"title": {
-				"en": "FriendsApp",
-				"de": "FriendsApp"
+				"en": "Friends App",
+				"de": "Friends App"
 			},
 			"descriptionShort": {
 				"en": "A CRUD app for managing friends, built with a separate frontend and backend.",
