@@ -1,36 +1,31 @@
 <script lang="ts">
 	import StepModal from './stepModal.svelte';
 	import Step from './Step.svelte';
-	
+
 	import { getProjectsByLanguage } from '$lib/data/projects';
 
-	let projects = getProjectsByLanguage('en')
-	let modalRef: any
-
+	let projects = getProjectsByLanguage('en');
+	let modalRef: any;
 
 	function handleOpenModal(index: number) {
-		modalRef.openModal(index)
+		modalRef.openModal(index);
 	}
-
-
-
-
 
 	let benefits = [
 		{
-			name: 'a selftaught developer',
+			name: 'driven and thoughtful',
 			description:
-				'I taught myself to code and found a whole new kind of joy in the art of finding usable solutions. Expecially solutions to make the everyday of going to work easier and much more pleasent allowing for the focus to be on the interesting and important tasks, rather than battling with outdated or halfbaked software.'
+				'When I take on a project, I stay with it. I like breaking problems into steps and working through them until they make sense. I’d rather build something solid than rush into quick fixes that don’t last.'
 		},
 		{
-			name: 'a product design and ux fanatic',
+			name: 'clear and collaborative',
 			description:
-				'As a developer and a user, the interaction needs to be pleasent and enjoyable with minimal friction. This for me, is a big part of finding a good solution.'
+				'With a background in social work, I know how much communication matters. Whether working with colleagues or building for others, I keep ideas clear and feedback valued. The best tools come from real conversations with the people who use them.'
 		},
 		{
-			name: 'an excellent communicator',
+			name: 'a programmer who solves problems',
 			description:
-				'As an educated socialworker I know the importance of good communication and rank this very highly in my work. Developing a good and usefull tool can only succed if the communication with the enduser is treated as just as important as the writing the code for the final product.'
+				'For me, coding is about making life easier. I’ve built scripts that save hours, apps that anyone can use, and small utilities that smooth daily work. Every project teaches me something new and expands my skillset.'
 		}
 	];
 </script>
@@ -49,12 +44,12 @@
 			<a
 				href="blank"
 				target="_blank"
-				class="poppins group relative mx-auto cursor-pointer overflow-hidden rounded-full bg-white px-6 py-3 text-base text-slate-950 sm:text-lg md:text-xl lg:mr-auto lg:ml-0"
+				class="poppins group relative mx-auto cursor-pointer overflow-hidden rounded-full bg-white px-6 py-3 text-base text-slate-950 sm:text-lg md:text-xl lg:ml-0 lg:mr-auto"
 			>
 				<div
-					class="absolute top-0 right-full z-0 h-full w-full bg-orange-500 opacity-85 duration-200 group-hover:translate-x-full"
+					class="absolute right-full top-0 z-0 h-full w-full bg-orange-500 opacity-85 duration-200 group-hover:translate-x-full"
 				></div>
-				<h4 class="relative z-9">Get in touch &rarr;</h4></a
+				<h4 class="z-9 relative">Get in touch &rarr;</h4></a
 			>
 		</div>
 		<div class="relative grid place-items-center shadow-2xl">
@@ -75,7 +70,7 @@
 		</div>
 		<div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-10">
 			{#each projects as project, index}
-				<Step {project} index={index} openModal={handleOpenModal}></Step>
+				<Step {project} {index} openModal={handleOpenModal}></Step>
 			{/each}
 		</div>
 	</section>
@@ -86,14 +81,23 @@
 		class="relative flex flex-col gap-16 py-20 pt-10 sm:gap-20 md:gap-24 lg:py-32 lg:pt-16"
 	>
 		<div
-			class="relative flex flex-col gap-2 py-4 text-center before:absolute before:top-0 before:left-0 before:h-1.5 before:w-2/3 before:bg-orange-700 after:absolute after:right-0 after:bottom-0 after:h-1.5 after:w-2/3 after:bg-orange-700"
+			class="relative flex flex-col gap-2 py-4 text-center before:absolute before:left-0 before:top-0 before:h-1.5 before:w-2/3 before:bg-orange-700 after:absolute after:bottom-0 after:right-0 after:h-1.5 after:w-2/3 after:bg-orange-700"
 		>
 			<h6 class="text-lg sm:text-xl md:text-2xl">Want to know more?</h6>
 			<h3 class="text-3xl font-semibold sm:text-4xl md:text-5xl">
-				A bit <span class="poppins text-orange-400">about</span>
+				A bit <span class="poppins text-orange-400">about me</span>
 			</h3>
 		</div>
-		<p class="poppins mx-auto text-lg font-semibold sm:text-xl md:text-2xl">I am . . .</p>
+		<p class="poppins mx-auto max-w-[800px] text-lg font-semibold sm:text-xl md:text-2xl">
+			I taught myself to <span class="poppins text-orange-400">code</span> out of curiosity for how
+			things <span class="poppins text-orange-400">work</span> and how to make them
+			<span class="poppins text-orange-400">better</span>. Small
+			<span class="poppins text-orange-400">experiments</span> soon grew into tools that made things
+			<span class="poppins text-orange-400">easier</span> and more
+			<span class="poppins text-orange-400">enjoyable</span>. Here are a few things that shape how I
+			<span class="poppins text-orange-400">work</span>:
+		</p>
+
 		<div class="mx-auto flex w-full max-w-[800px] flex-col gap-20">
 			{#each benefits as benefit, index}
 				<div class="flex gap-6 sm:gap-8">
@@ -107,67 +111,10 @@
 				</div>
 			{/each}
 		</div>
+
 		<h5 class="poppins text-center text-2xl font-semibold sm:text-3xl">
 			The <span class="poppins text-orange-400">Complete</span> Package
 		</h5>
-		<div class="mx-auto flex w-full max-w-[800px] flex-col gap-10 overflow-x-scroll rounded">
-			<table class="rounded bg-slate-300 text-center text-slate-700">
-				<thead class="border-b border-solid border-slate-200">
-					<tr>
-						<th />
-						<th class="p-2 px-4 whitespace-nowrap">Candidate #1 </th>
-						<th class="p-2 px-4 whitespace-nowrap">Candidate #2 </th>
-						<th class="p-2 px-4 whitespace-nowrap">Candidate #3 </th>
-						<th class="bg-orange-400 p-4 px-8 whitespace-nowrap">Me</th>
-					</tr></thead
-				>
-				<tbody>
-					<tr class="border-b border-solid border-slate-200">
-						<td
-							class=" border-r border-solid border-white py-4 pr-8 pl-4 text-sm font-semibold whitespace-nowrap"
-							>Dedication</td
-						>
-						<td><i class="fa-solid fa-check text-slate-500"></i></td>
-						<td><i class="fa-solid fa-xmark text-slate-500"></i></td>
-						<td><i class="fa-solid fa-check text-slate-500"></i></td>
-						<td><i class="fa-solid fa-check text-green-500"></i></td>
-					</tr>
-					<tr class="border-b border-solid border-slate-200">
-						<td
-							class="border-r border-solid border-white py-4 pr-8 pl-4 text-sm font-semibold whitespace-nowrap"
-							>Critical Thinking</td
-						>
-						<td><i class="fa-solid fa-xmark text-slate-500"></i></td>
-						<td><i class="fa-solid fa-check text-slate-500"></i></td>
-						<td><i class="fa-solid fa-xmark text-slate-500"></i></td>
-						<td><i class="fa-solid fa-check text-green-500"></i></td>
-					</tr>
-					<tr class="border-b border-solid border-slate-200">
-						<td
-							class="border-r border-solid border-white py-4 pr-8 pl-4 text-sm font-semibold whitespace-nowrap"
-							>Interpersonal Skills</td
-						>
-						<td><i class="fa-solid fa-check text-slate-500"></i></td>
-						<td><i class="fa-solid fa-check text-slate-500"></i></td>
-						<td><i class="fa-solid fa-xmark text-slate-500"></i></td>
-						<td><i class="fa-solid fa-check text-green-500"></i></td>
-					</tr>
-					<tr class="border-b border-solid border-slate-200">
-						<td
-							class="border-r border-solid border-white py-4 pr-8 pl-4 text-sm font-semibold whitespace-nowrap"
-							>Programming Ability</td
-						>
-						<td><i class="fa-solid fa-check text-slate-500"></i></td>
-						<td><i class="fa-solid fa-xmark text-slate-500"></i></td>
-						<td><i class="fa-solid fa-check text-slate-500"></i></td>
-						<td><i class="fa-solid fa-check text-green-500"></i></td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<div class="mx-auto -mt-12 italic opacity-50 sm:hidden">
-			<p>Scroll to see more &rarr;</p>
-		</div>
 		<p class="mx-auto">So why not invest?</p>
 	</section>
 </main>
