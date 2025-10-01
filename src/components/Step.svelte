@@ -46,7 +46,7 @@
 			class="relative ml-auto cursor-pointer overflow-hidden duration-200 after:absolute after:top-0 after:right-full after:z-[-1] after:h-0 after:h-full after:w-full after:bg-white after:duration-200
   hover:text-slate-950 hover:after:translate-x-full"
 		>
-			<p class="relative z-4">View Project &rarr;</p>
+			<p class="relative z-4">View Project on Github &rarr;</p>
 		</div>
 	</div>
 </a>

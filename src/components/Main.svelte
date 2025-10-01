@@ -115,18 +115,10 @@
 
 	<section id="projects" class="flex flex-col gap-24 py-20 lg:py-32">
 		<div class="flex flex-col gap-2 text-center">
-			<h6 class="text-lg sm:text-xl md:text-2xl">A few of my creative endeavors.</h6>
 			<h3 class="text-3xl font-semibold sm:text-4xl md:text-5xl">
 				Curious to <span class="poppins text-orange-400">see</span> my work?
 			</h3>
 		</div>
-		<a
-			href="blank"
-			target="_blank"
-			class="mx-auto -mt-10 -mb-4 flex items-center gap-2 rounded-md border border-solid border-white px-4 py-2 duration-200 hover:border-orange-700 sm:-mb-0"
-			><i class="fa-regular fa-circle-play"></i>
-			<p>Watch the video</p>
-		</a>
 		<div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-10">
 			{#each steps as step, i}
 				<Step {step}></Step>
