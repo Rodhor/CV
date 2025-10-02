@@ -24,7 +24,7 @@ interface JSONWorkPlace {
 	startDate: string;
 	endDate?: string;
 	descriptionShort: LocalizedString;
-	descriptionLong: LocalizedString;
+	descriptionLong?: LocalizedString;
 	highlights?: LocalizedString[];
 }
 
@@ -36,7 +36,7 @@ interface JSONEducation {
 	startDate: string;
 	endDate?: string;
 	descriptionShort: LocalizedString;
-	descriptionLong: LocalizedString;
+	descriptionLong?: LocalizedString;
 }
 
 interface JSONOther {
@@ -44,7 +44,7 @@ interface JSONOther {
 	startDate: string;
 	endDate?: string;
 	descriptionShort: LocalizedString;
-	descriptionLong: LocalizedString;
+	descriptionLong?: LocalizedString;
 }
 
 /**
@@ -136,6 +136,14 @@ function formatDateRange(start: string, end: string | undefined, lang: Lang): st
 	return `${formatDate(start, lang)} – ${formatDate(end, lang)}`;
 }
 
+function getLongDescription(
+	source: LocalizedString | undefined,
+	fallback: LocalizedString,
+	lang: Lang
+): string {
+	return source?.[lang] ?? fallback[lang];
+}
+
 /**
  * ---------------------------------------------------------------------
  * Transformation helpers
@@ -150,7 +158,7 @@ export function getWorkspaceByLanguage(lang: Lang): LocalizedWorkPlace[] {
 		endDate: wp.endDate,
 		timeframe: formatDateRange(wp.startDate, wp.endDate, lang),
 		descriptionShort: wp.descriptionShort[lang],
-		descriptionLong: wp.descriptionLong[lang],
+		descriptionLong: getLongDescription(wp.descriptionLong, wp.descriptionShort, lang),
 		highlights: wp.highlights?.map((h) => h[lang]) ?? []
 	}));
 }
@@ -163,7 +171,7 @@ export function getEducationByLanguage(lang: Lang): LocalizedEducation[] {
 		endDate: e.endDate,
 		timeframe: formatDateRange(e.startDate, e.endDate, lang),
 		descriptionShort: e.descriptionShort[lang],
-		descriptionLong: e.descriptionLong[lang],
+		descriptionLong: getLongDescription(e.descriptionLong, e.descriptionShort, lang),
 		fieldOfStudy: e.fieldOfStudy[lang],
 		degree: e.degree[lang]
 	}));
@@ -176,7 +184,7 @@ export function getOtherByLanguage(lang: Lang): LocalizedOther[] {
 		endDate: o.endDate,
 		timeframe: formatDateRange(o.startDate, o.endDate, lang),
 		descriptionShort: o.descriptionShort[lang],
-		descriptionLong: o.descriptionLong[lang]
+		descriptionLong: getLongDescription(o.descriptionLong, o.descriptionShort, lang)
 	}));
 }
 
