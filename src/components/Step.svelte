@@ -12,7 +12,11 @@
 		excel: 'excel.svg',
 		react: 'react.svg',
 		sqlite: 'sqlite.svg',
-		svelte: 'svelte.svg'
+		svelte: 'svelte.svg',
+		svelteKit: 'svelte.svg',
+		tailwindcss: 'tailwind.svg',
+		typescript: 'typescript.svg',
+		json: 'json.svg'
 	};
 
 	function getIconPath(tech: string): string {
@@ -32,7 +36,7 @@
 	>
 		<i class={project.icon}></i>
 	</div>
-	<h3 class="break-normal text-xl font-medium leading-tight sm:text-2xl md:text-3xl">
+	<h3 class="text-xl leading-tight font-medium break-normal sm:text-2xl md:text-3xl">
 		{project.title}
 	</h3>
 	<p>
@@ -55,7 +59,7 @@
 					target="_blank"
 					rel="noopener noreferrer"
 					class="relative cursor-pointer overflow-hidden rounded border border-violet-700 px-3 py-1 text-sm text-violet-300 transition duration-200
-					       after:absolute after:right-full after:top-0 after:z-[-1] after:h-full after:w-full after:bg-white after:duration-200
+					       after:absolute after:top-0 after:right-full after:z-[-1] after:h-full after:w-full after:bg-white after:duration-200
 					       hover:border-violet-400 hover:bg-violet-400 hover:text-slate-950 hover:after:translate-x-full"
 				>
 					View Project on GitHub &rarr;
@@ -69,7 +73,7 @@
 						target="_blank"
 						rel="noopener noreferrer"
 						class="relative cursor-pointer overflow-hidden rounded border border-violet-700 px-3 py-1 text-sm text-violet-300 transition duration-200
-					       after:absolute after:right-full after:top-0 after:z-[-1] after:h-full after:w-full after:bg-white after:duration-200
+					       after:absolute after:top-0 after:right-full after:z-[-1] after:h-full after:w-full after:bg-white after:duration-200
 					       hover:border-violet-400 hover:bg-violet-400 hover:text-slate-950 hover:after:translate-x-full"
 					>
 						{link.label} &rarr;

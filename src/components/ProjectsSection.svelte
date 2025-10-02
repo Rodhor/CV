@@ -7,8 +7,15 @@
 	let projects = getProjectsByLanguage('en');
 	let modalRef: any;
 
+	let showAll = false;
+	$: visibleProjects = showAll ? projects : projects.slice(0, 6);
+
 	function handleOpenModal(index: number) {
 		modalRef.openModal(index);
+	}
+
+	function toggleShowAll() {
+		showAll = !showAll;
 	}
 </script>
 
@@ -18,10 +25,24 @@
 			Curious to <span class="poppins text-orange-400">see</span> my work?
 		</h3>
 	</div>
+
 	<div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-10">
-		{#each projects as project, index}
-			<Step {project} {index} openModal={handleOpenModal}></Step>
+		{#each visibleProjects as project, index}
+			<Step {project} {index} openModal={handleOpenModal} />
 		{/each}
 	</div>
+
+	{#if projects.length > 6}
+		<div class="mt-8 flex justify-center">
+			<button
+				on:click={toggleShowAll}
+				class="rounded-lg border border-violet-700 px-6 py-2 text-violet-300 transition duration-200
+			       hover:border-violet-400 hover:bg-violet-400 hover:text-slate-950"
+			>
+				{showAll ? 'Show Less' : 'Show More'}
+			</button>
+		</div>
+	{/if}
 </section>
+
 <StepModal bind:this={modalRef} {projects} />
