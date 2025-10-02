@@ -7,12 +7,12 @@
 			link: '#projects'
 		},
 		{
-			name: 'About me',
-			link: '#about'
-		},
-		{
 			name: 'CV',
 			link: '#cv'
+		},
+		{
+			name: 'About me',
+			link: '#about'
 		}
 	];
 </script>
