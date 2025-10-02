@@ -1,4 +1,5 @@
 <script lang="ts">
+	import CVSection from './CVSection.svelte';
 	import IntroSection from './IntroSection.svelte';
 
 	import ProjectsSection from './ProjectsSection.svelte';
@@ -12,4 +13,5 @@
 	<ProjectsSection></ProjectsSection>
 
 	<About></About>
+	<CVSection></CVSection>
 </main>
