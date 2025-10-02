@@ -64,7 +64,7 @@
 								<p class="text-sm text-slate-400">{entry.organization}</p>
 							{:else if entry.entryType === 'education'}
 								<h3 class="text-lg font-bold text-white md:text-xl">
-									{entry.degree} – {entry.fieldOfStudy}
+									{entry.degree}
 								</h3>
 								<p class="text-sm text-slate-400">{entry.organization}</p>
 							{:else if entry.entryType === 'other'}

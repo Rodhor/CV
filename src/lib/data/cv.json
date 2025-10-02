@@ -116,7 +116,7 @@
 			}
 		},
 		{
-			"organization": "telc",
+			"organization": "telc gGmbH",
 			"location": "Germany",
 			"fieldOfStudy": {
 				"en": "German Intensive Course",
@@ -125,7 +125,7 @@
 			"startDate": "2017-04",
 			"endDate": "2017-10",
 			"degree": {
-				"en": "telc German C1 University",
+				"en": "telc German C1",
 				"de": "telc Deutsch C1-Hochschule"
 			},
 			"descriptionShort": {
