@@ -23,7 +23,7 @@
 	class="relative flex flex-col gap-16 py-20 pt-10 sm:gap-20 md:gap-24 lg:py-32 lg:pt-16"
 >
 	<div
-		class="relative flex flex-col gap-2 py-4 text-center before:absolute before:left-0 before:top-0 before:h-1.5 before:w-2/3 before:bg-orange-700 after:absolute after:bottom-0 after:right-0 after:h-1.5 after:w-2/3 after:bg-orange-700"
+		class="relative flex flex-col gap-2 py-4 text-center before:absolute before:top-0 before:left-0 before:h-1.5 before:w-2/3 before:bg-orange-700 after:absolute after:right-0 after:bottom-0 after:h-1.5 after:w-2/3 after:bg-orange-700"
 	>
 		<h6 class="text-lg sm:text-xl md:text-2xl">Want to know more?</h6>
 		<h3 class="text-3xl font-semibold sm:text-4xl md:text-5xl">

@@ -11,7 +11,7 @@
 		<!-- Header -->
 		<div class="mb-8 flex flex-col items-center justify-between gap-6 sm:flex-row">
 			<h2 class="text-3xl font-bold tracking-tight md:text-4xl">
-				<span class="text-violet-400">Curriculum Vitae</span>
+				<span class="text-violet-400">My Journey</span>
 			</h2>
 
 			<!-- Switch -->

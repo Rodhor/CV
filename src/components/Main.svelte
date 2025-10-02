@@ -11,7 +11,6 @@
 	<IntroSection></IntroSection>
 
 	<ProjectsSection></ProjectsSection>
-
-	<About></About>
 	<CVSection></CVSection>
+	<About></About>
 </main>
