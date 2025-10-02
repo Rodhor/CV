@@ -1,49 +1,7 @@
 <script lang="ts">
-	import { getWorkspaceByLanguage, getEducationByLanguage } from '$lib/data/cv';
+	import { getCompleteCV, type LocalizedEntry, type Lang } from '$lib/data/cv';
 
-	let lang: 'en' | 'de' = 'en';
-
-	interface CVEntry {
-		type: 'work' | 'education';
-		organization: string;
-		location: string;
-		positionOrDegree: string;
-		startDate: string;
-		endDate?: string;
-		descriptionShort: string;
-		descriptionLong?: string;
-	}
-
-	function buildTimeline(lang: 'en' | 'de'): CVEntry[] {
-		const work = getWorkspaceByLanguage(lang).map((wp) => ({
-			type: 'work' as const,
-			organization: wp.organization,
-			location: wp.location,
-			positionOrDegree: wp.position,
-			startDate: wp.startDate,
-			endDate: wp.endDate,
-			descriptionShort: wp.descriptionShort,
-			descriptionLong: wp.descriptionLong
-		}));
-
-		const edu = getEducationByLanguage(lang).map((e) => ({
-			type: 'education' as const,
-			organization: e.organization,
-			location: e.location,
-			positionOrDegree: `${e.degree} – ${e.fieldOfStudy}`,
-			startDate: e.startDate,
-			endDate: e.endDate,
-			descriptionShort: e.descriptionShort,
-			descriptionLong: e.descriptionLong
-		}));
-
-		// newest first
-		return [...work, ...edu].sort(
-			(a, b) => new Date(b.startDate).getTime() - new Date(a.startDate).getTime()
-		);
-	}
-
-	let cvEntries: CVEntry[] = buildTimeline(lang);
+	let cvEntries: LocalizedEntry[] = getCompleteCV('en');
 
 	let showLong = false;
 </script>
@@ -64,7 +22,7 @@
 					role="switch"
 					aria-checked={showLong}
 					on:click={() => (showLong = !showLong)}
-					class="relative inline-flex h-6 w-12 items-center rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-violet-500 {showLong
+					class="relative inline-flex h-6 w-12 items-center rounded-full transition-colors duration-300 focus:ring-2 focus:ring-violet-500 focus:outline-none {showLong
 						? 'bg-violet-600'
 						: 'bg-slate-700'}"
 				>
@@ -79,19 +37,19 @@
 		</div>
 
 		<ul class="-my-4">
-			{#each cvEntries as entry, index (entry.organization + entry.startDate)}
+			{#each cvEntries as entry, index (entry.organization + entry.timeframe)}
 				<li class="relative py-6">
 					<div class="grid grid-cols-1 gap-x-4 sm:grid-cols-[10rem_2.25rem_1fr]">
 						<!-- Col 1: Timeframe -->
 						<time
-							class="mb-3 inline-flex h-7 items-center justify-center rounded-full bg-violet-900/30 px-3 text-sm font-semibold uppercase text-violet-300 sm:mb-0 sm:justify-self-start"
+							class="mb-3 inline-flex h-7 items-center justify-center rounded-full bg-violet-900/30 px-3 text-sm font-semibold text-violet-300 sm:mb-0 sm:justify-self-start"
 						>
-							{entry.startDate} – {entry.endDate ?? 'Present'}
+							{entry.timeframe}
 						</time>
 
 						<!-- Col 2: Dot + Line -->
 						<div class="relative hidden sm:flex sm:flex-col sm:items-center">
-							<div class="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-slate-700"></div>
+							<div class="absolute top-0 left-1/2 h-full w-px -translate-x-1/2 bg-slate-700"></div>
 							<span
 								class="relative z-10 mt-1 h-3 w-3 rounded-full bg-violet-600 ring-4 ring-slate-950"
 								aria-hidden="true"
@@ -100,12 +58,23 @@
 
 						<!-- Col 3: Content -->
 						<div>
-							{#if entry.positionOrDegree}
-								<h3 class="text-lg font-bold text-white md:text-xl">{entry.positionOrDegree}</h3>
+							<!-- Heading depends on type -->
+							{#if entry.entryType === 'work'}
+								<h3 class="text-lg font-bold text-white md:text-xl">{entry.position}</h3>
+								<p class="text-sm text-slate-400">{entry.organization}</p>
+							{:else if entry.entryType === 'education'}
+								<h3 class="text-lg font-bold text-white md:text-xl">
+									{entry.degree} – {entry.fieldOfStudy}
+								</h3>
+								<p class="text-sm text-slate-400">{entry.organization}</p>
+							{:else if entry.entryType === 'other'}
+								<h3 class="text-lg font-bold text-white md:text-xl">{entry.title}</h3>
+								{#if entry.organization}
+									<p class="text-sm text-slate-400">{entry.organization}</p>
+								{/if}
 							{/if}
 
-							<p class="text-sm text-slate-400">{entry.organization}</p>
-
+							<!-- Description -->
 							<p class="mt-1 text-slate-300">
 								{#if showLong && entry.descriptionLong}
 									{entry.descriptionLong}
