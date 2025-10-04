@@ -1,4 +1,5 @@
 <script lang="ts">
+	import '$lib/i18n';
 	import GoTopArrow from './../components/GoTopArrow.svelte';
 	import '../app.css';
 	import Footer from '../components/Footer.svelte';

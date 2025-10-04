@@ -1,0 +1,10 @@
+{
+  "header": {
+    "nav": {
+      "projects": "Projekte",
+      "cv": "Lebenslauf",
+      "aboutMe": "Über mich",
+      "getInTouch": "Kontakt aufnehmen"
+    }
+  }
+}

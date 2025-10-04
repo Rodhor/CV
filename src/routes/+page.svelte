@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-	<title>Chris Nielsen - Developer Portfolio</title>
+	<title>Chris Nielsen - Portfolio</title>
 	<meta name="description" content="Portfolio of Chris Nielsen, self-taught developer." />
 </svelte:head>
 

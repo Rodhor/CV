@@ -1,0 +1,10 @@
+{
+  "header": {
+    "nav": {
+      "projects": "Projects",
+      "cv": "CV",
+      "aboutMe": "About me",
+      "getInTouch": "Get in touch"
+    }
+  }
+}

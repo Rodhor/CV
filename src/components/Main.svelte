@@ -9,7 +9,6 @@
 
 <main class="flex flex-1 flex-col p-4">
 	<IntroSection></IntroSection>
-
 	<ProjectsSection></ProjectsSection>
 	<CVSection></CVSection>
 	<About></About>
