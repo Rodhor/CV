@@ -1,7 +1,6 @@
 <script lang="ts">
-	import { t, locale } from 'svelte-i18n';
-	import { get } from 'svelte/store';
-	import { onMount } from 'svelte';
+	import { t } from 'svelte-i18n';
+	import { setLang, currentLang } from '$lib/i18n';
 
 	export let y: number;
 
@@ -10,42 +9,25 @@
 		{ key: 'header.nav.cv', link: '#cv' },
 		{ key: 'header.nav.aboutMe', link: '#about' }
 	];
-
-	let currentLang: 'en' | 'de' = get(locale) === 'de' ? 'de' : 'en';
-
-	// Load saved language on mount
-	onMount(() => {
-		const savedLang = localStorage.getItem('lang');
-		if (savedLang === 'en' || savedLang === 'de') {
-			currentLang = savedLang;
-			locale.set(savedLang);
-		}
-	});
-
-	// Update language and save to localStorage
-	function setLang(l: 'en' | 'de') {
-		currentLang = l;
-		locale.set(l);
-		localStorage.setItem('lang', l);
-	}
 </script>
 
 <header
-	class="sticky top-0 z-[100] flex items-center justify-between rounded-b-2xl px-6 py-6 transition-all duration-300"
+	class="sticky top-0 z-[100] flex items-center justify-between rounded-b-2xl px-6 py-6 transition-all duration-500"
 	class:bg-slate-950={y > 0}
 	class:py-4={y > 0}
 	class:shadow-lg={y > 0}
 >
 	<!-- fading border only on scroll -->
 	<div
-		class="pointer-events-none absolute bottom-0 left-1/2 h-[2px] w-screen -translate-x-1/2 bg-gradient-to-r from-transparent via-orange-500/50 to-transparent opacity-0 transition-opacity duration-500"
+		class="absolute bottom-0 left-0 z-0 h-[2px] w-full bg-gradient-to-r from-transparent via-orange-500/50 to-transparent opacity-0 transition-opacity duration-500"
 		class:opacity-100={y > 0}
 	></div>
 
-	<h1 class="font-medium">
+	<h1 class="relative z-10 font-medium">
 		<b class="poppins font-bold">Chris</b> Nielsen
 	</h1>
-	<div class="hidden items-center gap-4 sm:flex">
+
+	<div class="relative z-10 hidden items-center gap-4 sm:flex">
 		{#each tabs as tab}
 			<a href={tab.link} class="duration-200 hover:text-orange-400">
 				<p>{$t(tab.key)}</p>
@@ -57,15 +39,15 @@
 		>
 			<div
 				class="absolute inset-y-0 left-0 w-1/2 rounded-md bg-violet-400/10 transition-transform duration-300"
-				style:transform={currentLang === 'en' ? 'translateX(0%)' : 'translateX(100%)'}
+				style:transform={$currentLang === 'en' ? 'translateX(0%)' : 'translateX(100%)'}
 			></div>
 
 			<button
 				type="button"
 				on:click={() => setLang('en')}
 				class="relative z-10 flex items-center justify-center text-[11px] leading-none text-violet-300 uppercase hover:text-violet-200 sm:text-xs"
-				class:font-semibold={currentLang === 'en'}
-				aria-pressed={currentLang === 'en'}
+				class:font-semibold={$currentLang === 'en'}
+				aria-pressed={$currentLang === 'en'}
 			>
 				EN
 			</button>
@@ -74,8 +56,8 @@
 				type="button"
 				on:click={() => setLang('de')}
 				class="relative z-10 flex items-center justify-center text-[11px] leading-none text-violet-300 uppercase hover:text-violet-200 sm:text-xs"
-				class:font-semibold={currentLang === 'de'}
-				aria-pressed={currentLang === 'de'}
+				class:font-semibold={$currentLang === 'de'}
+				aria-pressed={$currentLang === 'de'}
 			>
 				DE
 			</button>
