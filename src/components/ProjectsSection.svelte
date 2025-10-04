@@ -1,14 +1,17 @@
 <script lang="ts">
 	import StepModal from './stepModal.svelte';
 	import Step from './Step.svelte';
-
 	import { getProjectsByLanguage } from '$lib/data/projects';
+	import { type Lang } from '$lib/utils/languageSetup';
+	import { t, locale } from 'svelte-i18n';
 
 	let projects = getProjectsByLanguage('en');
 	let modalRef: any;
 
 	let showAll = false;
 	$: visibleProjects = showAll ? projects : projects.slice(0, 6);
+
+	$: projects = getProjectsByLanguage($locale as Lang);
 
 	function handleOpenModal(index: number) {
 		modalRef.openModal(index);
@@ -19,10 +22,12 @@
 	}
 </script>
 
-<section id="projects" class="flex flex-col gap-24 py-20 lg:py-32">
+<section id="projects" class="flex flex-col gap-20 py-5 lg:py-10">
 	<div class="flex flex-col gap-2 text-center">
 		<h3 class="text-3xl font-semibold sm:text-4xl md:text-5xl">
-			Curious to <span class="poppins text-orange-400">see</span> my work?
+			{$t('projects.heading.start')}
+			<span class="poppins text-orange-400">{$t('projects.heading.highlight')}</span>
+			{$t('projects.heading.end')}
 		</h3>
 	</div>
 
@@ -33,13 +38,13 @@
 	</div>
 
 	{#if projects.length > 6}
-		<div class="mt-8 flex justify-center">
+		<div class="flex justify-center">
 			<button
 				on:click={toggleShowAll}
 				class="rounded-lg border border-violet-700 px-6 py-2 text-violet-300 transition duration-200
-			       hover:border-violet-400 hover:bg-violet-400 hover:text-slate-950"
+				       hover:border-violet-400 hover:bg-violet-400 hover:text-slate-950"
 			>
-				{showAll ? 'Show Less' : 'Show More'}
+				{showAll ? $t('projects.buttons.showLess') : $t('projects.buttons.showMore')}
 			</button>
 		</div>
 	{/if}

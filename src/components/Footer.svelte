@@ -1,7 +1,11 @@
+<script>
+	import { t } from 'svelte-i18n';
+</script>
+
 <footer
 	class="flex flex-col items-center justify-center gap-4 border-t border-solid border-orange-900 bg-black py-20 sm:gap-8 sm:py-32"
 >
-	<p class="bg-white px-4 py-2 font-medium text-slate-950">Connect with me &darr;</p>
+	<p class="bg-white px-4 py-2 font-medium text-slate-950">{$t('footer.connectWithMe')} &darr;</p>
 
 	<div class="flex flex-col items-center justify-center gap-4">
 		<p>

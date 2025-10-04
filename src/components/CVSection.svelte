@@ -1,9 +1,14 @@
 <script lang="ts">
-	import { getCompleteCV, type LocalizedEntry, type Lang } from '$lib/data/cv';
+	import { getCompleteCV, type LocalizedEntry } from '$lib/data/cv';
+	import { type Lang } from '$lib/utils/languageSetup';
+	import { t, locale } from 'svelte-i18n';
 
 	let cvEntries: LocalizedEntry[] = getCompleteCV('en');
 
 	let showLong = false;
+
+	// reactive reload when language changes
+	$: cvEntries = getCompleteCV($locale as Lang);
 </script>
 
 <section class="bg-slate-950 py-16 text-white" id="cv">
@@ -11,12 +16,12 @@
 		<!-- Header -->
 		<div class="mb-8 flex flex-col items-center justify-between gap-6 sm:flex-row">
 			<h2 class="text-3xl font-bold tracking-tight md:text-4xl">
-				<span class="text-violet-400">My Journey</span>
+				<span class="text-violet-400">{$t('cvSection.header')}</span>
 			</h2>
 
 			<!-- Switch -->
 			<div class="flex items-center gap-3">
-				<span class="text-sm text-slate-400">Short</span>
+				<span class="text-sm text-slate-400">{$t('cvSection.showShort')}</span>
 				<button
 					aria-label="toggle to switch between short or long descriptions"
 					role="switch"
@@ -32,17 +37,17 @@
 							: 'translate-x-1'}"
 					></span>
 				</button>
-				<span class="text-sm text-slate-400">Long</span>
+				<span class="text-sm text-slate-400">{$t('cvSection.showLong')}</span>
 			</div>
 		</div>
 
 		<ul class="-my-4">
-			{#each cvEntries as entry, index (entry.organization + entry.timeframe)}
+			{#each cvEntries as entry (entry.organization + entry.timeframe)}
 				<li class="relative py-6">
 					<div class="grid grid-cols-1 gap-x-4 sm:grid-cols-[10rem_2.25rem_1fr]">
 						<!-- Col 1: Timeframe -->
 						<time
-							class="mb-3 inline-flex h-7 items-center justify-center rounded-full bg-violet-900/30 px-3 text-sm font-semibold text-violet-300 sm:mb-0 sm:justify-self-start"
+							class="mb-3 inline-flex h-7 items-center justify-center rounded-full bg-violet-900/30 px-3 text-xs font-bold text-violet-300 sm:mb-0 sm:justify-self-start"
 						>
 							{entry.timeframe}
 						</time>
