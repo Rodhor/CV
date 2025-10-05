@@ -1,62 +1,62 @@
 {
-	"header": {
-		"nav": {
-			"projects": "Projekte",
-			"cv": "Lebenslauf",
-			"aboutMe": "Über mich",
-			"getInTouch": "Kontakt"
-		}
-	},
-	"introSection": {
-		"greeting": "Hey! Ich bin",
-		"roleStart": "Ein selbst gelehrter",
-		"roleHighlight": "Entwickler",
-		"favoriteTechStart": "Zu meinen",
-		"favoriteTechHighlight": "Lieblingstechnologien",
-		"favoriteTechEnd": "gehören Python, Go, SQLite, Tailwind CSS und Visual Basic for Applications.",
-		"getInTouch": "Kontakt aufnehmen"
-	},
-	"about": {
-		"subtitle": "Möchten Sie mehr erfahren?",
-		"titleStart": "Ein bisschen ",
-		"titleHighlight": "über mich",
-		"paragraph": "Ich habe mir <span class='text-orange-400'>Programmieren</span> selbst beigebracht – aus Neugier, wie Dinge <span class='text-orange-400'>funktionieren</span> und wie ich sie <span class='text-orange-400'>verbessern</span> kann. Kleine <span class='text-orange-400'>Experimente</span> wuchsen zu Tools heran, die Aufgaben <span class='text-orange-400'>effizienter</span> und <span class='text-orange-400'>effektiver</span> machten. Hier ein paar Beispiele, die meine Arbeitsweise <span class='text-orange-400'>zeigen</span>:",
-		"benefits": {
-			"1": {
-				"name": "Zielstrebig und überlegt",
-				"description": "Wenn ich ein Projekt übernehme, bleibe ich dran. Ich zerlege Probleme gerne in einzelne Schritte und arbeite sie durch, bis sie Sinn ergeben. Ich baue lieber etwas Solides, anstatt schnelle, kurzlebige Lösungen zu wählen."
-			},
-			"2": {
-				"name": "Kommunikativ",
-				"description": "Durch meinen Hintergrund in der Sozialarbeit weiß ich, wie wichtig Kommunikation ist. Ob in der Zusammenarbeit mit Kolleg*innen oder beim Entwickeln für andere – ich halte Ideen klar und schätze Feedback. Die besten Werkzeuge entstehen durch echte Gespräche mit den Menschen, die sie nutzen."
-			},
-			"3": {
-				"name": "Ein Programmierer, der Probleme löst",
-				"description": "Für mich bedeutet Programmieren, das Leben einfacher zu machen. Ich habe Skripte entwickelt, die Stunden sparen, Apps, die jede*r nutzen kann, und kleine Tools, die den Arbeitsalltag erleichtern. Jedes Projekt bringt mir neue Erkenntnisse und erweitert meine Fähigkeiten."
-			}
-		},
-		"footerTitleStart": "Das ",
-		"footerTitleHighlight": "komplette",
-		"footerTitleEnd": "Paket!",
-		"footerText": "Warum also nicht investieren?"
-	},
-	"projects": {
-		"heading": "Neugierig, <span class='text-orange-400'>meine Arbeit</span> zu sehen?",
-		"buttons": {
-			"showMore": "Mehr anzeigen",
-			"showLess": "Weniger anzeigen"
-		}
-	},
-	"stepComponent": {
-		"viewProjectOnGithub": "Projekt auf GitHub ansehen",
-		"viewOnGithub": "Auf GitHub ansehen"
-	},
-	"footer": {
-		"connectWithMe": "Vernetze dich mit mir"
-	},
-	"cvSection": {
-		"header": "Mein Werdegang",
-		"showShort": "Kurz",
-		"showLong": "Lang"
-	}
+  "header": {
+    "nav": {
+      "projects": "Projekte",
+      "cv": "Lebenslauf",
+      "aboutMe": "Über mich",
+      "getInTouch": "Kontakt"
+    }
+  },
+  "introSection": {
+    "greeting": "Hey! Ich bin",
+    "roleStart": "Ein selbst erlernter",
+    "roleHighlight": "Entwickler",
+    "favoriteTechStart": "Zu meinen",
+    "favoriteTechHighlight": "Lieblingstechnologien",
+    "favoriteTechEnd": "gehören Python, Go, SQLite, Tailwind CSS und Visual Basic for Applications.",
+    "getInTouch": "Kontakt aufnehmen"
+  },
+  "about": {
+    "subtitle": "Möchten Sie mehr erfahren?",
+    "titleStart": " ",
+    "titleHighlight": "Über mich",
+    "paragraph": "Ich habe mir das <span class='text-orange-400'>Programmieren</span> selbst beigebracht – aus Neugier, wie Dinge <span class='text-orange-400'>funktionieren</span> und wie ich sie <span class='text-orange-400'>verbessern</span> kann. Kleine <span class='text-orange-400'>Experimente</span> wuchsen zu Tools heran, die Aufgaben <span class='text-orange-400'>effizienter</span> und <span class='text-orange-400'>effektiver</span> machten. Hier ein paar Beispiele, die meine Arbeitsweise <span class='text-orange-400'>zeigen</span>:",
+    "benefits": {
+      "1": {
+        "name": "Zielstrebig und überlegt",
+        "description": "Wenn ich ein Projekt übernehme, bleibe ich dran. Ich breche Probleme gerne herunter und arbeite sie Schritt für Schritt durch, bis eine Lösung gefunden wird. Ich baue lieber etwas Solides, anstatt schnelle, notdürftige Lösungen zu wählen."
+      },
+      "2": {
+        "name": "Kommunikatives Geschick",
+        "description": "Durch meinen Hintergrund in der Sozialarbeit weiß ich, wie wichtig Kommunikation ist. Ob in der Zusammenarbeit mit Kolleg*innen oder beim Entwickeln für andere – ich schätze Feedback und klare Kommunikation. Die besten Werkzeuge entstehen in Zusammenarbeit mit den Menschen, die sie nutzen."
+      },
+      "3": {
+        "name": "Ein Programmierer, der Probleme löst",
+        "description": "Für mich bedeutet Programmieren, das Leben einfacher zu machen. Ich habe Skripte entwickelt, die Stunden sparen, Apps, die jede*r nutzen kann, und kleine Tools, die den Arbeitsalltag erleichtern. Jedes Projekt bringt mir neue Erkenntnisse und erweitert meine Fähigkeiten."
+      }
+    },
+    "footerTitleStart": "Das ",
+    "footerTitleHighlight": "komplette",
+    "footerTitleEnd": "Paket!",
+    "footerText": "Warum also nicht investieren?"
+  },
+  "projects": {
+    "heading": "Neugierig, <span class='text-orange-400'>meine Arbeit</span> zu sehen?",
+    "buttons": {
+      "showMore": "Mehr anzeigen",
+      "showLess": "Weniger anzeigen"
+    }
+  },
+  "stepComponent": {
+    "viewProjectOnGithub": "Projekt auf GitHub ansehen",
+    "viewOnGithub": "Auf GitHub ansehen"
+  },
+  "footer": {
+    "connectWithMe": "Vernetze dich mit mir"
+  },
+  "cvSection": {
+    "header": "Mein Werdegang",
+    "showShort": "Kurz",
+    "showLong": "Lang"
+  }
 }

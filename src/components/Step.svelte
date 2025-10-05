@@ -14,7 +14,7 @@
 		react: 'react.svg',
 		sqlite: 'sqlite.svg',
 		svelte: 'svelte.svg',
-		svelteKit: 'svelte.svg',
+		sveltekit: 'svelte.svg',
 		tailwindcss: 'tailwind.svg',
 		typescript: 'typescript.svg',
 		json: 'json.svg'
