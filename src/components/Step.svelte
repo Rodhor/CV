@@ -30,7 +30,7 @@
 
 <button
 	on:click={() => openModal(index)}
-	class="group flex cursor-pointer flex-col justify-between gap-4 rounded-lg border border-violet-700 p-4 text-center duration-200 hover:border-violet-400 sm:p-6 md:p-8"
+	class="group flex cursor-pointer flex-col justify-between gap-4 rounded-lg border border-violet-700 p-4 text-center duration-200 hover:border-violet-400 focus:outline-none sm:p-6 md:p-8"
 >
 	<!-- Top section -->
 	<div class="flex flex-grow flex-col gap-4">

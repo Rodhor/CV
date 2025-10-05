@@ -9,19 +9,21 @@
 	// Animation durations
 	const SCALE_IN = 300;
 
+	// Open modal
 	export function openModal(index: number) {
 		activeIndex = index;
 		stepModal.showModal();
 		isVisible = true;
 	}
 
+	// Close modal
 	function closeModal() {
 		isVisible = false;
-
 		activeIndex = null;
 		stepModal.close();
 	}
 
+	// Click outside to close
 	function handleBackdropClick(event: MouseEvent) {
 		const rect = stepModal.getBoundingClientRect();
 		const isInDialog =
@@ -31,11 +33,23 @@
 			event.clientX <= rect.left + rect.width;
 		if (!isInDialog) closeModal();
 	}
+
+	// -----------------------------
+	// Lock scrolling while modal is open
+	// -----------------------------
+	$: if (typeof document !== 'undefined') {
+		if (isVisible) {
+			document.body.style.overflow = 'hidden';
+		} else {
+			document.body.style.overflow = '';
+		}
+	}
 </script>
 
 <dialog
 	bind:this={stepModal}
 	on:click={handleBackdropClick}
+	on:close={() => (isVisible = false)}
 	class="m-auto bg-transparent outline-none backdrop:backdrop-blur-sm focus:outline-none"
 >
 	{#if isVisible && activeIndex !== null}
@@ -82,7 +96,7 @@
 			<!-- Close button -->
 			<button
 				on:click={closeModal}
-				class="absolute right-3 top-3 rounded-full bg-gray-200 px-2 py-0.5 text-xs hover:bg-gray-300 sm:right-4 sm:top-4 sm:text-sm lg:text-base"
+				class="absolute top-3 right-3 rounded-full bg-gray-200 px-2 py-0.5 text-xs hover:bg-gray-300 sm:top-4 sm:right-4 sm:text-sm lg:text-base"
 			>
 				✕
 			</button>
