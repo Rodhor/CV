@@ -23,20 +23,7 @@
 	</div>
 
 	<p class="poppins mx-auto max-w-[800px] text-lg font-semibold sm:text-xl md:text-2xl">
-		{$t('about.paragraphStart')}
-		<span class="poppins text-orange-400">{$t('about.keywords.code')}</span>
-		{$t('about.paragraphMiddle1')}
-		<span class="poppins text-orange-400">{$t('about.keywords.work')}</span>
-		{$t('about.paragraphMiddle2')}
-		<span class="poppins text-orange-400">{$t('about.keywords.better')}</span>.
-		{$t('about.paragraphMiddle3')}
-		<span class="poppins text-orange-400">{$t('about.keywords.experiments')}</span>
-		{$t('about.paragraphMiddle4')}
-		<span class="poppins text-orange-400">{$t('about.keywords.easier')}</span>
-		{$t('about.paragraphMiddle5')}
-		<span class="poppins text-orange-400">{$t('about.keywords.enjoyable')}</span>.
-		{$t('about.paragraphEnd')}
-		<span class="poppins text-orange-400">{$t('about.keywords.work')}</span>:
+		{@html $t('about.paragraph')}
 	</p>
 
 	<div class="mx-auto flex w-full max-w-[800px] flex-col gap-20">

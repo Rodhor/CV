@@ -1,79 +1,61 @@
 {
-  "introSection": {
-    "greeting": "Hi! I'm",
-    "roleStart": "A self-taught",
-    "roleHighlight": "Developer",
-    "favoriteTechStart": "My",
-    "favoriteTechHighlight": "favorite tech",
-    "favoriteTechEnd": "includes Python, Go, SQLite, Tailwind CSS, and Visual Basic for Applications.",
-    "getInTouch": "Get in touch"
-  },
-  "about": {
-    "subtitle": "Want to know more?",
-    "titleStart": "A bit ",
-    "titleHighlight": "about me",
-    "paragraphStart": "I taught myself to ",
-    "paragraphMiddle1": " out of curiosity for how things ",
-    "paragraphMiddle2": " and how to make them ",
-    "paragraphMiddle3": ". Small ",
-    "paragraphMiddle4": " soon grew into tools that made things ",
-    "paragraphMiddle5": " and more ",
-    "paragraphEnd": " Here are a few things that shape how I ",
-    "keywords": {
-      "code": "code",
-      "work": "work",
-      "better": "better",
-      "experiments": "experiments",
-      "easier": "easier",
-      "enjoyable": "enjoyable"
-    },
-    "benefits": {
-      "1": {
-        "name": "Driven and thoughtful",
-        "description": "When I take on a project, I stay with it. I like breaking problems into steps and working through them until they make sense. I’d rather build something solid than rush into quick fixes that don’t last."
-      },
-      "2": {
-        "name": "Clear and collaborative",
-        "description": "With a background in social work, I know how much communication matters. Whether working with colleagues or building for others, I keep ideas clear and feedback valued. The best tools come from real conversations with the people who use them."
-      },
-      "3": {
-        "name": "A programmer who solves problems",
-        "description": "For me, coding is about making life easier. I’ve built scripts that save hours, apps that anyone can use, and small utilities that smooth daily work. Every project teaches me something new and expands my skillset."
-      }
-    },
-    "footerTitleStart": "The ",
-    "footerTitleHighlight": "Complete",
-    "footerTitleEnd": "Package!",
-    "footerText": "So why not invest?"
-  },
-  "projects": {
-    "heading": {
-      "start": "Curious to ",
-      "highlight": "see",
-      "end": " my work?"
-    },
-    "buttons": {
-      "showMore": "Show More",
-      "showLess": "Show Less"
-    }
-  },
-  "header": {
-    "nav": {
-      "projects": "Projects",
-      "cv": "CV",
-      "aboutMe": "About Me",
-      "getInTouch": "Get in Touch"
-    }
-  },
-  "stepComponent": {
-    "viewProjectOnGithub": "View Project on GitHub"
-  },
-  "footer": {
-    "connectWithMe": "Connect with me"
-  },
-  "cvSection": {
-    "header": "My Journey",
-    "showShort": "Short",
-    "showLong": "Long"
-  }
+	"header": {
+		"nav": {
+			"projects": "Projects",
+			"cv": "CV",
+			"aboutMe": "About Me",
+			"getInTouch": "Get in Touch"
+		}
+	},
+	"introSection": {
+		"greeting": "Hi! I'm",
+		"roleStart": "A self-taught",
+		"roleHighlight": "Developer",
+		"favoriteTechStart": "My",
+		"favoriteTechHighlight": "favorite tech",
+		"favoriteTechEnd": "includes Python, Go, SQLite, Tailwind CSS, and Visual Basic for Applications.",
+		"getInTouch": "Get in touch"
+	},
+	"about": {
+		"subtitle": "Want to know more?",
+		"titleStart": "A bit ",
+		"titleHighlight": "about me",
+		"paragraph": "I taught myself how to <span class='text-orange-400'>code</span> out of curiosity about how things <span class='text-orange-400'>work</span> and how to <span class='text-orange-400'>improve</span> them. Small <span class='text-orange-400'>experiments</span> quickly grew into tools that made tasks <span class='text-orange-400'>more efficient</span> and <span class='text-orange-400'>more effective</span>. Here are a few examples that <span class='text-orange-400'>show</span> how I work:",
+		"benefits": {
+			"1": {
+				"name": "Driven and thoughtful",
+				"description": "When I take on a project, I stay with it. I like breaking problems into steps and working through them until they make sense. I’d rather build something solid than rush into quick fixes that don’t last."
+			},
+			"2": {
+				"name": "Clear and collaborative",
+				"description": "With a background in social work, I know how much communication matters. Whether working with colleagues or building for others, I keep ideas clear and feedback valued. The best tools come from real conversations with the people who use them."
+			},
+			"3": {
+				"name": "A programmer who solves problems",
+				"description": "For me, coding is about making life easier. I’ve built scripts that save hours, apps that anyone can use, and small utilities that smooth daily work. Every project teaches me something new and expands my skillset."
+			}
+		},
+		"footerTitleStart": "The ",
+		"footerTitleHighlight": "Complete",
+		"footerTitleEnd": "Package!",
+		"footerText": "So why not invest?"
+	},
+	"projects": {
+		"heading": "Curious to <span class='text-orange-400'>see my work</span>?",
+		"buttons": {
+			"showMore": "Show More",
+			"showLess": "Show Less"
+		}
+	},
+	"cvSection": {
+		"header": "My Journey",
+		"showShort": "Short",
+		"showLong": "Long"
+	},
+	"footer": {
+		"connectWithMe": "Connect with me"
+	},
+	"stepComponent": {
+		"viewProjectOnGithub": "View Project on GitHub"
+	}
 }

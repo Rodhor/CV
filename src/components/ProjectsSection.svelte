@@ -25,9 +25,7 @@
 <section id="projects" class="flex flex-col gap-20 py-5 lg:py-10">
 	<div class="flex flex-col gap-2 text-center">
 		<h3 class="text-3xl font-semibold sm:text-4xl md:text-5xl">
-			{$t('projects.heading.start')}
-			<span class="poppins text-orange-400">{$t('projects.heading.highlight')}</span>
-			{$t('projects.heading.end')}
+			{@html $t('projects.heading')}
 		</h3>
 	</div>
 

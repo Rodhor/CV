@@ -1,170 +1,172 @@
 {
-	"work": [
-		{
-			"organization": "LFA - moveo gGmbH",
-			"location": "Rottweil",
-			"position": {
-				"en": "Project Manager",
-				"de": "Projektleitung"
-			},
-			"startDate": "2022-06",
-			"endDate": "2025-03",
-			"descriptionShort": {
-				"en": "I managed multiple projects with a focus on workforce integration, team leadership, and creating automation tools.",
-				"de": "Ich leitete mehrere Projekte mit Schwerpunkt Arbeitsmarktintegration, Teamführung und der Entwicklung von Automatisierungstools."
-			},
-			"descriptionLong": {
-				"en": "After my time as Project Staff, I took on greater responsibility as a Project Manager for several projects. My work focused on helping people integrate into the German workforce through training, further education, and retraining programs. I led teams, coordinated activities, and ensured that project goals were met. In parallel, I continued developing automation tools—mainly in VBA and Python—to improve efficiency and reduce errors. While many of these VBA systems were internal and cannot be shared, I also created DocsAutomation, a standalone Python-based tool that automated filling Word templates and was used productively for several years.",
-				"de": "Nach meiner Zeit als Projektmitarbeiter übernahm ich mehr Verantwortung als Projektleiter für mehrere Projekte. Meine Arbeit konzentrierte sich darauf, Menschen durch Schulungen, Weiterbildungen und Umschulungen in den deutschen Arbeitsmarkt zu integrieren. Ich leitete Teams, koordinierte Aktivitäten und stellte sicher, dass die Projektziele erreicht wurden. Parallel dazu entwickelte ich Automatisierungstools – hauptsächlich in VBA und Python –, um die Effizienz zu steigern und Fehler zu reduzieren. Während viele dieser VBA-Systeme intern waren und nicht geteilt werden können, habe ich auch DocsAutomation entwickelt, ein eigenständiges Python-basiertes Tool, das das Ausfüllen von Word-Vorlagen automatisierte und über mehrere Jahre produktiv genutzt wurde."
-			},
-			"highlights": [
-				{
-					"en": "Developed project-specific tools to optimize internal workflows",
-					"de": "Entwicklung projektbezogener Tools zur Optimierung interner Prozesse"
-				},
-				{
-					"en": "Managed and coordinated staff, including responsibility for controlling tasks",
-					"de": "Führung und Koordination von Mitarbeitenden sowie Durchführung von Controlling-Aufgaben"
-				},
-				{
-					"en": "Led projects focused on workforce integration, further education, and retraining",
-					"de": "Leitung von Projekten mit Schwerpunkt Arbeitsmarktintegration, Weiterbildung und Umschulung"
-				},
-				{
-					"en": "Introduced automation tools such as DocsAutomation to improve efficiency and reduce errors",
-					"de": "Einführung von Automatisierungstools wie DocsAutomation zur Effizienzsteigerung und Fehlerreduzierung"
-				}
-			]
-		},
-		{
-			"organization": "LFA - moveo gGmbH",
-			"location": "Rottweil",
-			"position": {
-				"en": "Project Staff",
-				"de": "Projektmitarbeiter"
-			},
-			"startDate": "2020-10",
-			"endDate": "2025-03",
-			"descriptionShort": {
-				"en": "I worked with Germans and migrants to support their integration into the workforce through applications, training, and retraining programs.",
-				"de": "Ich arbeitete mit Deutschen und Migrant*innen zusammen, um ihre Integration in den Arbeitsmarkt durch Bewerbungen, Schulungen und Umschulungen zu unterstützen."
-			},
-			"descriptionLong": {
-				"en": "In this role I worked directly with people—both Germans and migrants—helping them integrate into the workforce. I supported participants with applications, navigating systems and laws, and developing workplace skills such as language and behavior. For those in retraining programs, I provided guidance throughout their education, including academic support, securing placements for practical experience, and later finding long-term employment. Alongside this work, I began creating automation tools in VBA and Python to reduce repetitive tasks, which laid the foundation for later projects such as DocsAutomation.",
-				"de": "In dieser Rolle arbeitete ich direkt mit Menschen – sowohl Deutschen als auch Migrant*innen – zusammen und half ihnen, sich in den Arbeitsmarkt zu integrieren. Ich unterstützte Teilnehmende bei Bewerbungen, beim Umgang mit Systemen und Gesetzen sowie beim Entwickeln von Arbeitsmarktfähigkeiten wie Sprache und Verhalten. Für Teilnehmende in Umschulungsprogrammen übernahm ich die Begleitung während ihrer gesamten Ausbildung, einschließlich fachlicher Unterstützung, der Organisation von Praxisplätzen und der anschließenden Arbeitsaufnahme. Parallel dazu begann ich, Automatisierungstools in VBA und Python zu entwickeln, um wiederkehrende Aufgaben zu reduzieren – die Grundlage für spätere Projekte wie DocsAutomation."
-			},
-			"highlights": [
-				{
-					"en": "Advised and supported participants in further education and retraining programs",
-					"de": "Beratung und Begleitung von Teilnehmenden bei Fort- und Weiterbildungen sowie Umschulungen"
-				},
-				{
-					"en": "Facilitated the labor market integration of both Germans and migrants",
-					"de": "Unterstützung der Arbeitsmarktintegration von Deutschen und Migrant*innen"
-				},
-				{
-					"en": "Guided participants in retraining programs through their education, securing practical placements and later employment",
-					"de": "Begleitung von Teilnehmenden in Umschulungen während ihrer Ausbildung, Unterstützung bei der Suche nach Praxisplätzen und späterer Arbeitsaufnahme"
-				},
-				{
-					"en": "Created VBA and Python automation tools to reduce repetitive tasks and improve efficiency",
-					"de": "Entwicklung von VBA- und Python-Automatisierungstools zur Reduzierung repetitiver Aufgaben und Verbesserung der Effizienz"
-				}
-			]
-		},
-
-		{
-			"organization": "Deutsche Post AG",
-			"location": "",
-			"position": {
-				"en": "Mail Carrier",
-				"de": "Zusteller"
-			},
-			"startDate": "2015-10",
-			"endDate": "2017-04",
-			"descriptionShort": {
-				"en": "I worked as a mail carrier for Deutsche Post AG, delivering letters and parcels.",
-				"de": "Ich arbeitete als Zusteller für die Deutsche Post AG und stellte Briefe und Pakete zu."
-			},
-			"descriptionLong": {
-				"en": "I mainly delivered letters and parcels to companies and private households. During this time, I improved my German skills through daily conversations with customers and developed basic time management through route planning.",
-				"de": "Ich stellte hauptsächlich Briefe und Pakete an Unternehmen und Privathaushalte zu. In dieser Zeit verbesserte ich meine Deutschkenntnisse durch tägliche Gespräche mit Kund*innen und entwickelte grundlegendes Zeitmanagement durch Routenplanung."
-			}
-		}
-	],
-	"education": [
-		{
-			"organization": "Duale Hochschule Villingen-Schwenningen",
-			"location": "Villingen-Schwenningen",
-			"fieldOfStudy": {
-				"en": "Social Work – Youth, Family and Social Assistance",
-				"de": "Soziale Arbeit – Jugend-, Familien- und Sozialhilfe"
-			},
-			"degree": {
-				"en": "Bachelor of Arts (B.A.)",
-				"de": "Bachelor of Arts (B.A.)"
-			},
-			"startDate": "2017-10",
-			"endDate": "2020-09",
-			"descriptionShort": {
-				"en": "I studied Social Work with a focus on youth, family, and social assistance.",
-				"de": "Ich habe Soziale Arbeit mit Schwerpunkt Jugend-, Familien- und Sozialhilfe studiert."
-			},
-			"descriptionLong": {
-				"en": "I completed a Bachelor’s degree in Social Work with a specialization in youth, family, and social assistance. Through dual studies, I gained both academic knowledge and practical experience by combining coursework with fieldwork.",
-				"de": "Ich habe ein Bachelor-Studium in Sozialer Arbeit mit Spezialisierung auf Jugend-, Familien- und Sozialhilfe abgeschlossen. Durch das duale Studium konnte ich sowohl akademisches Wissen als auch praktische Erfahrungen in Theorie- und Praxiseinsätzen sammeln."
-			}
-		},
-		{
-			"organization": "telc gGmbH",
-			"location": "Germany",
-			"fieldOfStudy": {
-				"en": "German Intensive Course",
-				"de": "Deutsch Intensivkurs"
-			},
-			"startDate": "2017-04",
-			"endDate": "2017-10",
-			"degree": {
-				"en": "telc German C1",
-				"de": "telc Deutsch C1-Hochschule"
-			},
-			"descriptionShort": {
-				"en": "I completed an intensive German language course with C1 certification.",
-				"de": "Ich habe einen Intensiv-Deutschkurs mit C1-Zertifizierung abgeschlossen."
-			},
-			"descriptionLong": {
-				"en": "I participated in a full-time intensive German language course to reach academic-level proficiency. I successfully obtained the telc C1 University certificate, which enabled me to study and work professionally in German.",
-				"de": "Ich nahm an einem Vollzeit-Intensivkurs Deutsch teil, um akademische Sprachfertigkeiten zu erlangen. Ich habe erfolgreich das telc C1-Hochschule Zertifikat abgeschlossen, wodurch mir Studium und berufliche Tätigkeit auf Deutsch ermöglicht wurden."
-			},
-			"highlights": [
-				{
-					"en": "Successfully completed with telc German C1 University certificate",
-					"de": "Erfolgreich abgeschlossen mit telc Deutsch C1-Hochschule Zertifikat"
-				}
-			]
-		}
-	],
-	"other": [
-		{
-			"title": {
-				"en": "Hiked the Pacific Crest Trail (PCT) in the United States",
-				"de": "Wanderung des Pacific Crest Trail (PCT) in den Vereinigten Staaten"
-			},
-			"startDate": "2025-03",
-			"endDate": "2025-09",
-			"descriptionShort": {
-				"en": "Together with my wife, I hiked about 3,300 km of the Pacific Crest Trail across the United States, pausing due to snow in the Sierra Nevada and taking a road trip before continuing on the trail.",
-				"de": "Zusammen mit meiner Frau wanderte ich rund 3.300 km des Pacific Crest Trail in den USA, legte wegen Schnee in der Sierra Nevada eine Pause ein und unternahm einen Roadtrip, bevor wir den Trail fortsetzte."
-			}
-		},
-		{
-			"title": { "en": "Relocation to Germany", "de": "Umzug nach Deutschland" },
-			"startDate": "2015-07",
-			"endDate": "2015-07",
-			"descriptionShort": {
-				"en": "I moved from Denmark to Germany.",
-				"de": "Ich zog von Dänemark nach Deutschland."
-			}
-		}
-	]
+  "work": [
+    {
+      "organization": "LFA - moveo gGmbH",
+      "location": "Rottweil",
+      "position": {
+        "en": "Project Manager",
+        "de": "Projektleitung"
+      },
+      "startDate": "2022-06",
+      "endDate": "2025-03",
+      "descriptionShort": {
+        "en": "I managed multiple projects with a focus on workforce integration, team leadership, and creating automation tools.",
+        "de": "Ich leitete mehrere Projekte mit Schwerpunkt Arbeitsmarktintegration, Teamführung und der Entwicklung von Automatisierungstools."
+      },
+      "descriptionLong": {
+        "en": "After my time as Project Staff, I took on greater responsibility as a Project Manager for several projects. My work focused on helping people integrate into the German workforce through training, further education, and retraining programs. I led teams, coordinated activities, and ensured that project goals were met. In parallel, I continued developing automation tools—mainly in VBA and Python—to improve efficiency and reduce errors. While many of these VBA systems were internal and cannot be shared, I also created DocsAutomation, a standalone Python-based tool that automated filling Word templates and was used productively for several years.",
+        "de": "Nach einiger Zeit als Projektmitarbeiter übernahm ich mehr Verantwortung als Projektleiter für mehrere Projekte. Meine Arbeit konzentrierte sich darauf, Menschen durch Schulungen, Weiterbildungen und Umschulungen in den deutschen Arbeitsmarkt zu integrieren. Ich leitete Teams, koordinierte Aktivitäten und stellte sicher, dass die Projektziele erreicht wurden. Parallel dazu entwickelte ich Automatisierungstools – hauptsächlich in VBA und Python –, um die Effizienz zu steigern und Fehler zu reduzieren. Während viele dieser VBA-Systeme intern waren und nicht geteilt werden können, habe ich auch DocsAutomation entwickelt, ein eigenständiges Python-basiertes Tool, das das Ausfüllen von Word-Vorlagen automatisierte und über mehrere Jahre produktiv genutzt wurde."
+      },
+      "highlights": [
+        {
+          "en": "Developed project-specific tools to optimize internal workflows",
+          "de": "Entwicklung projektbezogener Tools zur Optimierung interner Prozesse"
+        },
+        {
+          "en": "Managed and coordinated staff, including responsibility for controlling tasks",
+          "de": "Führung und Koordination von Mitarbeitenden sowie Durchführung von Controlling-Aufgaben"
+        },
+        {
+          "en": "Led projects focused on workforce integration, further education, and retraining",
+          "de": "Leitung von Projekten mit Schwerpunkt Arbeitsmarktintegration, Weiterbildung und Umschulung"
+        },
+        {
+          "en": "Introduced automation tools such as DocsAutomation to improve efficiency and reduce errors",
+          "de": "Einführung von Automatisierungstools wie DocsAutomation zur Effizienzsteigerung und Fehlerreduzierung"
+        }
+      ]
+    },
+    {
+      "organization": "LFA - moveo gGmbH",
+      "location": "Rottweil",
+      "position": {
+        "en": "Project Staff",
+        "de": "Projektmitarbeiter"
+      },
+      "startDate": "2020-10",
+      "endDate": "2025-03",
+      "descriptionShort": {
+        "en": "I worked with Germans and migrants to support their integration into the workforce through applications, training, and retraining programs.",
+        "de": "Ich arbeitete mit Deutschen und Migrant*innen zusammen, um ihre Integration in den Arbeitsmarkt durch Bewerbungen, Schulungen und Umschulungen zu unterstützen."
+      },
+      "descriptionLong": {
+        "en": "In this role I worked directly with people—both Germans and migrants—helping them integrate into the workforce. I supported participants with applications, navigating systems and laws, and developing workplace skills such as language and behavior. For those in retraining programs, I provided guidance throughout their education, including academic support, securing placements for practical experience, and later finding long-term employment. Alongside this work, I began creating automation tools in VBA and Python to reduce repetitive tasks, which laid the foundation for later projects such as DocsAutomation.",
+        "de": "In dieser Rolle arbeitete ich direkt mit Menschen – sowohl Deutschen als auch Migrant*innen – zusammen und half ihnen, sich in den Arbeitsmarkt zu integrieren. Ich unterstützte Teilnehmende bei Bewerbungen, beim Umgang mit Systemen und Gesetzen sowie beim Entwickeln von Arbeitsmarktfähigkeiten wie Sprache und Verhalten. Für Teilnehmende in Umschulungsprogrammen übernahm ich die Begleitung während ihrer gesamten Ausbildung, einschließlich fachlicher Unterstützung, der Organisation von Praxisplätzen und der anschließenden Arbeitsaufnahme. Parallel dazu begann ich, Automatisierungstools in VBA und Python zu entwickeln, um wiederkehrende Aufgaben zu reduzieren – die Grundlage für spätere Projekte wie DocsAutomation."
+      },
+      "highlights": [
+        {
+          "en": "Advised and supported participants in further education and retraining programs",
+          "de": "Beratung und Begleitung von Teilnehmenden bei Fort- und Weiterbildungen sowie Umschulungen"
+        },
+        {
+          "en": "Facilitated the labor market integration of both Germans and migrants",
+          "de": "Unterstützung der Arbeitsmarktintegration von Deutschen und Migrant*innen"
+        },
+        {
+          "en": "Guided participants in retraining programs through their education, securing practical placements and later employment",
+          "de": "Begleitung von Teilnehmenden in Umschulungen während ihrer Ausbildung, Unterstützung bei der Suche nach Praxisplätzen und späterer Arbeitsaufnahme"
+        },
+        {
+          "en": "Created VBA and Python automation tools to reduce repetitive tasks and improve efficiency",
+          "de": "Entwicklung von VBA- und Python-Automatisierungstools zur Reduzierung repetitiver Aufgaben und Verbesserung der Effizienz"
+        }
+      ]
+    },
+    {
+      "organization": "Deutsche Post AG",
+      "location": "",
+      "position": {
+        "en": "Mail Carrier",
+        "de": "Zusteller"
+      },
+      "startDate": "2015-10",
+      "endDate": "2017-04",
+      "descriptionShort": {
+        "en": "I worked as a mail carrier for Deutsche Post AG, delivering letters and parcels.",
+        "de": "Ich arbeitete als Zusteller für die Deutsche Post AG und stellte Briefe und Pakete zu."
+      },
+      "descriptionLong": {
+        "en": "I mainly delivered letters and parcels to companies and private households. During this time, I improved my German skills through daily conversations with customers.",
+        "de": "Ich stellte hauptsächlich Briefe und Pakete an Unternehmen und Privathaushalte zu. In dieser Zeit verbesserte ich meine Deutschkenntnisse durch tägliche Gespräche mit Kund*innen."
+      }
+    }
+  ],
+  "education": [
+    {
+      "organization": "Duale Hochschule Villingen-Schwenningen",
+      "location": "Villingen-Schwenningen",
+      "fieldOfStudy": {
+        "en": "Social Work – Youth, Family and Social Assistance",
+        "de": "Soziale Arbeit – Jugend-, Familien- und Sozialhilfe"
+      },
+      "degree": {
+        "en": "Bachelor of Arts (B.A.)",
+        "de": "Bachelor of Arts (B.A.)"
+      },
+      "startDate": "2017-10",
+      "endDate": "2020-09",
+      "descriptionShort": {
+        "en": "I studied Social Work with a focus on youth, family, and social assistance.",
+        "de": "Ich habe Soziale Arbeit mit Schwerpunkt Jugend-, Familien- und Sozialhilfe studiert."
+      },
+      "descriptionLong": {
+        "en": "I completed a Bachelor’s degree in Social Work with a specialization in youth, family, and social assistance. Through dual studies, I gained both academic knowledge and practical experience by combining coursework with fieldwork.",
+        "de": "Ich habe ein Bachelor-Studium in Sozialer Arbeit mit Spezialisierung auf Jugend-, Familien- und Sozialhilfe abgeschlossen. Durch das duale Studium konnte ich sowohl akademisches Wissen als auch praktische Erfahrungen in Theorie- und Praxiseinsätzen sammeln."
+      }
+    },
+    {
+      "organization": "telc gGmbH",
+      "location": "Germany",
+      "fieldOfStudy": {
+        "en": "German Intensive Course",
+        "de": "Deutsch Intensivkurs"
+      },
+      "startDate": "2017-04",
+      "endDate": "2017-10",
+      "degree": {
+        "en": "telc German C1",
+        "de": "telc Deutsch C1-Hochschule"
+      },
+      "descriptionShort": {
+        "en": "I completed an intensive German language course with C1 certification.",
+        "de": "Ich habe einen Intensiv-Deutschkurs mit C1-Zertifizierung abgeschlossen."
+      },
+      "descriptionLong": {
+        "en": "I participated in a full-time intensive German language course to reach academic-level proficiency. I successfully obtained the telc C1 University certificate, which enabled me to study and work professionally in German.",
+        "de": "Ich nahm an einem Vollzeit Intensiv-Deutschkurs teil, um akademische Sprachfertigkeiten zu erlangen. Ich habe erfolgreich das telc C1-Hochschule Zertifikat abgeschlossen, wodurch mir Studium und berufliche Tätigkeit auf Deutsch ermöglicht wurden."
+      },
+      "highlights": [
+        {
+          "en": "Successfully completed with telc German C1 University certificate",
+          "de": "Erfolgreich abgeschlossen mit telc Deutsch C1-Hochschule Zertifikat"
+        }
+      ]
+    }
+  ],
+  "other": [
+    {
+      "title": {
+        "en": "Hiked the Pacific Crest Trail (PCT) in the United States",
+        "de": "Wanderung des Pacific Crest Trail (PCT) in den Vereinigten Staaten"
+      },
+      "startDate": "2025-03",
+      "endDate": "2025-09",
+      "descriptionShort": {
+        "en": "Together with my wife, I hiked about 3,300 km of the Pacific Crest Trail across the United States, pausing due to snow in the Sierra Nevada and taking a road trip before continuing on the trail.",
+        "de": "Zusammen mit meiner Frau wanderte ich rund 3.300 km des Pacific Crest Trail in den USA, legte wegen Schnee in der Sierra Nevada eine Pause ein und unternahm einen Roadtrip, bevor wir den Trail fortsetzte."
+      }
+    },
+    {
+      "title": {
+        "en": "Relocation to Germany",
+        "de": "Umzug nach Deutschland"
+      },
+      "startDate": "2015-07",
+      "endDate": "2015-07",
+      "descriptionShort": {
+        "en": "I moved from Denmark to Germany.",
+        "de": "Ich zog von Dänemark nach Deutschland."
+      }
+    }
+  ]
 }
