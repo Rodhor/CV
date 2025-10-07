@@ -30,9 +30,9 @@
 
 	<div class="relative grid place-items-center shadow-2xl">
 		<img
-			src="images/profile.png"
+			src="images/profile.jpg"
 			alt="Chris Nielsen"
-			class="z-[2] max-h-[70vh] object-cover"
+			class="z-[2] max-h-[30vh] rounded-full object-cover"
 			loading="lazy"
 		/>
 	</div>
