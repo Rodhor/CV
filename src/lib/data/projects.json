@@ -2,6 +2,37 @@
 	"projects": [
 		{
 			"title": {
+				"en": "JobTrackr",
+				"de": "JobTrackr"
+			},
+			"descriptionShort": {
+				"en": "A local-first desktop application for managing job applications, companies, contacts, and notes — built with Rust, Tauri, and Svelte.",
+				"de": "Eine lokale Desktop-Anwendung zur Verwaltung von Bewerbungen, Unternehmen, Kontakten und Notizen — entwickelt mit Rust, Tauri und Svelte."
+			},
+			"descriptionLong": {
+				"en": "JobTrackr is an offline-first desktop application designed to manage the entire job application process. Built with a Rust + Tauri backend and a SvelteKit + Tailwind frontend, it provides a fast, lightweight, and privacy-focused solution for tracking applications, companies, contacts, reminders, and notes — all stored locally in an embedded SQLite database. The app architecture emphasizes modularity, scalability, and clean separation between backend commands, services, and frontend stores. It features custom Svelte components built on top of Shadcn-Svelte (dialogs, selectors, date pickers, alerts), async store loading, and structured logging via the `tracing` crate with daily log rotation. Designed for single-user use without cloud dependencies, JobTrackr aims for a robust and efficient workflow tailored to real-world job search management.",
+				"de": "JobTrackr ist eine offline-orientierte Desktop-Anwendung, die den gesamten Bewerbungsprozess abbildet. Entwickelt mit einem Rust- und Tauri-Backend sowie einem SvelteKit- und Tailwind-Frontend, bietet sie eine schnelle, schlanke und datenschutzfreundliche Lösung zur Verwaltung von Bewerbungen, Unternehmen, Kontakten, Erinnerungen und Notizen – alles lokal in einer eingebetteten SQLite-Datenbank gespeichert. Die Architektur legt Wert auf Modularität, Skalierbarkeit und eine klare Trennung zwischen Backend-Kommandos, Services und Frontend-Stores. Die Benutzeroberfläche nutzt individuell angepasste Svelte-Komponenten auf Basis von Shadcn-Svelte (Dialoge, Selektoren, Datumswähler, Warnungen), asynchrones Laden von Stores sowie strukturiertes Logging über das `tracing`-Framework mit täglicher Logrotation. Als reine Einzelbenutzer-Anwendung ohne Cloud-Abhängigkeiten zielt JobTrackr auf einen robusten und effizienten Workflow für das Bewerbungsmanagement ab."
+			},
+			"technologies": [
+				"Rust",
+				"Tauri",
+				"SvelteKit",
+				"TailwindCSS",
+				"TypeScript",
+				"SQLite",
+				"sqlx",
+				"Shadcn-Svelte"
+			],
+			"links": [
+				{
+					"label": "GitHub",
+					"url": "https://github.com/Rodhor/JobTrackr-rust"
+				}
+			],
+			"icon": "fa-solid fa-briefcase"
+		},
+		{
+			"title": {
 				"en": "Portfolio Website",
 				"de": "Portfolio-Website"
 			},
