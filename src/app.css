@@ -4,13 +4,13 @@ html {
 	scroll-behavior: smooth;
 }
 
-* {
+body {
 	font-family: 'Roboto', sans-serif;
 }
 
 h1,
 h2,
 h3,
-.Poppins {
+.poppins {
 	font-family: 'Poppins', sans-serif;
 }
