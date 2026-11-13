@@ -1,140 +1,166 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "title": "CV Schema",
-    "type": "object",
-    "properties": {
-        "work": {
-            "type": "array",
-            "items": {
-                "$ref": "#/$defs/workEntry"
-            }
-        },
-        "education": {
-            "type": "array",
-            "items": {
-                "$ref": "#/$defs/educationEntry"
-            }
-        }
-    },
-    "required": [
-        "work",
-        "education"
-    ],
-    "additionalProperties": false,
-    "$defs": {
-        "localizedString": {
-            "type": "object",
-            "properties": {
-                "en": {
-                    "type": "string"
-                },
-                "de": {
-                    "type": "string"
-                }
-            },
-            "required": [
-                "en",
-                "de"
-            ],
-            "additionalProperties": false
-        },
-        "highlight": {
-            "type": "object",
-            "properties": {
-                "en": {
-                    "type": "string"
-                },
-                "de": {
-                    "type": "string"
-                }
-            },
-            "required": [
-                "en",
-                "de"
-            ],
-            "additionalProperties": false
-        },
-        "workEntry": {
-            "type": "object",
-            "properties": {
-                "organization": {
-                    "type": "string"
-                },
-                "location": {
-                    "type": "string"
-                },
-                "position": {
-                    "$ref": "#/$defs/localizedString"
-                },
-                "startDate": {
-                    "type": "string",
-                    "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])$"
-                },
-                "endDate": {
-                    "type": "string",
-                    "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])$"
-                },
-                "descriptionShort": {
-                    "$ref": "#/$defs/localizedString"
-                },
-                "descriptionLong": {
-                    "$ref": "#/$defs/localizedString"
-                },
-                "degree": {
-                    "$ref": "#/$defs/localizedString"
-                },
-                "highlights": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/$defs/highlight"
-                    }
-                }
-            },
-            "required": [
-                "organization",
-                "position",
-                "startDate",
-                "descriptionShort"
-            ],
-            "additionalProperties": false
-        },
-        "educationEntry": {
-            "type": "object",
-            "properties": {
-                "organization": {
-                    "type": "string"
-                },
-                "location": {
-                    "type": "string"
-                },
-                "fieldOfStudy": {
-                    "$ref": "#/$defs/localizedString"
-                },
-                "degree": {
-                    "$ref": "#/$defs/localizedString"
-                },
-                "startDate": {
-                    "type": "string",
-                    "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])$"
-                },
-                "endDate": {
-                    "type": "string",
-                    "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])$"
-                },
-                "descriptionShort": {
-                    "$ref": "#/$defs/localizedString"
-                },
-                "descriptionLong": {
-                    "$ref": "#/$defs/localizedString"
-                }
-            },
-            "required": [
-                "organization",
-                "degree",
-                "startDate",
-                "descriptionShort"
-            ],
-            "additionalProperties": false
-        }
-    }
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "CV Schema",
+	"type": "object",
+	"properties": {
+		"$schema": {
+			"type": "string"
+		},
+		"work": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/workEntry"
+			}
+		},
+		"education": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/educationEntry"
+			}
+		},
+		"other": {
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/otherEntry"
+			}
+		}
+	},
+	"required": ["work", "education", "other"],
+	"additionalProperties": false,
+	"$defs": {
+		"localizedString": {
+			"type": "object",
+			"properties": {
+				"en": {
+					"type": "string"
+				},
+				"de": {
+					"type": "string"
+				}
+			},
+			"required": ["en", "de"],
+			"additionalProperties": false
+		},
+		"highlight": {
+			"type": "object",
+			"properties": {
+				"en": {
+					"type": "string"
+				},
+				"de": {
+					"type": "string"
+				}
+			},
+			"required": ["en", "de"],
+			"additionalProperties": false
+		},
+		"workEntry": {
+			"type": "object",
+			"properties": {
+				"organization": {
+					"type": "string"
+				},
+				"location": {
+					"type": "string"
+				},
+				"position": {
+					"$ref": "#/$defs/localizedString"
+				},
+				"startDate": {
+					"type": "string",
+					"pattern": "^[0-9]{4}-(0[1-9]|1[0-2])$"
+				},
+				"endDate": {
+					"type": "string",
+					"pattern": "^[0-9]{4}-(0[1-9]|1[0-2])$"
+				},
+				"descriptionShort": {
+					"$ref": "#/$defs/localizedString"
+				},
+				"descriptionLong": {
+					"$ref": "#/$defs/localizedString"
+				},
+				"highlights": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/highlight"
+					}
+				}
+			},
+			"required": ["organization", "position", "startDate", "descriptionShort"],
+			"additionalProperties": false
+		},
+		"educationEntry": {
+			"type": "object",
+			"properties": {
+				"organization": {
+					"type": "string"
+				},
+				"location": {
+					"type": "string"
+				},
+				"fieldOfStudy": {
+					"$ref": "#/$defs/localizedString"
+				},
+				"degree": {
+					"$ref": "#/$defs/localizedString"
+				},
+				"startDate": {
+					"type": "string",
+					"pattern": "^[0-9]{4}-(0[1-9]|1[0-2])$"
+				},
+				"endDate": {
+					"type": "string",
+					"pattern": "^[0-9]{4}-(0[1-9]|1[0-2])$"
+				},
+				"descriptionShort": {
+					"$ref": "#/$defs/localizedString"
+				},
+				"descriptionLong": {
+					"$ref": "#/$defs/localizedString"
+				},
+				"highlights": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/highlight"
+					}
+				}
+			},
+			"required": ["organization", "degree", "startDate", "descriptionShort"],
+			"additionalProperties": false
+		},
+		"otherEntry": {
+			"type": "object",
+			"properties": {
+				"title": {
+					"$ref": "#/$defs/localizedString"
+				},
+				"startDate": {
+					"type": "string",
+					"pattern": "^[0-9]{4}-(0[1-9]|1[0-2])$"
+				},
+				"endDate": {
+					"type": "string",
+					"pattern": "^[0-9]{4}-(0[1-9]|1[0-2])$"
+				},
+				"descriptionShort": {
+					"$ref": "#/$defs/localizedString"
+				},
+				"descriptionLong": {
+					"$ref": "#/$defs/localizedString"
+				},
+				"location": {
+					"type": "string"
+				},
+				"highlights": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/highlight"
+					}
+				}
+			},
+			"required": ["title", "startDate", "descriptionShort"],
+			"additionalProperties": false
+		}
+	}
 }
