@@ -1,6 +1,6 @@
 # 🌍 Chris Nielsen – Developer Portfolio
 
-A modern, multilingual portfolio built with **SvelteKit**, **Tailwind CSS**, and **svelte-i18n** — showcasing projects, experience, and skills with a focus on clean design, localization, and responsive UI.
+A modern, multilingual portfolio built with **SvelteKit** and **Tailwind CSS**, showcasing projects and experience in English and German.
 
 ---
 
@@ -26,13 +26,13 @@ npm run dev
 
 ## 🧩 Tech Stack
 
-| Layer      | Tech                                                     |
-| ---------- | -------------------------------------------------------- |
-| Framework  | [SvelteKit](https://kit.svelte.dev/)                     |
-| Styling    | [Tailwind CSS](https://tailwindcss.com/)                 |
-| i18n       | [svelte-i18n](https://github.com/kaisermann/svelte-i18n) |
-| Language   | TypeScript                                               |
-| Deployment | Netlify                                                  |
-| Data       | Localized JSON (CV, projects)                            |
+| Layer      | Tech                                          |
+| ---------- | --------------------------------------------- |
+| Framework  | [SvelteKit](https://kit.svelte.dev/)          |
+| Styling    | [Tailwind CSS](https://tailwindcss.com/)      |
+| i18n       | Localized JSON dictionaries and Svelte stores |
+| Language   | TypeScript                                    |
+| Deployment | Netlify                                       |
+| Data       | Localized JSON (CV, projects)                 |
 
 ---
