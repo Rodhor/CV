@@ -1,4 +1,4 @@
-import projectJson from '$lib/data/projects.json';
+import projectJson from './projects.json';
 import { type LocalizedString, type Lang } from '../utils/languageSetup';
 
 /**
@@ -8,18 +8,18 @@ import { type LocalizedString, type Lang } from '../utils/languageSetup';
  * - These describe the raw JSON data shape as it exists in projects.json.
  * - LocalizedString is used for multi-language text fields.
  */
-interface Link {
-  label: string;
-  url: string;
+export interface Link {
+	label: string;
+	url: string;
 }
 
 interface JSONProject {
-  title: LocalizedString;
-  descriptionShort: LocalizedString;
-  descriptionLong: LocalizedString;
-  technologies: string[];
-  links: Link[];
-  icon: string;
+	title: LocalizedString;
+	descriptionShort: LocalizedString;
+	descriptionLong: LocalizedString;
+	technologies: string[];
+	links: Link[];
+	icon: string;
 }
 
 /**
@@ -30,13 +30,13 @@ interface JSONProject {
  * - After transformation, all LocalizedString fields are converted
  *   into plain strings in the selected language.
  */
-interface LocalizedProject {
-  title: string;
-  descriptionShort: string;
-  descriptionLong: string;
-  technologies: string[];
-  links: Link[];
-  icon: string;
+export interface LocalizedProject {
+	title: string;
+	descriptionShort: string;
+	descriptionLong: string;
+	technologies: string[];
+	links: Link[];
+	icon: string;
 }
 
 /**
@@ -59,12 +59,12 @@ const projects: JSONProject[] = projectJson.projects;
  * - Returns a clean LocalizedProject[].
  */
 export function getProjectsByLanguage(lang: Lang): LocalizedProject[] {
-  return projects.map((p) => ({
-    title: p.title[lang],
-    descriptionShort: p.descriptionShort[lang],
-    descriptionLong: p.descriptionLong[lang],
-    technologies: p.technologies,
-    links: p.links,
-    icon: p.icon
-  }));
+	return projects.map((p) => ({
+		title: p.title[lang],
+		descriptionShort: p.descriptionShort[lang],
+		descriptionLong: p.descriptionLong[lang],
+		technologies: p.technologies,
+		links: p.links,
+		icon: p.icon
+	}));
 }

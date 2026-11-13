@@ -1,1 +1,1 @@
-// place files you want to import through the `$lib` alias in this folder.
+// Shared data and utilities for the site.

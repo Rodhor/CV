@@ -1,51 +1,44 @@
-import { register, init, getLocaleFromNavigator, locale, waitLocale } from 'svelte-i18n';
-import { writable } from 'svelte/store';
-import { browser } from '$app/environment';
+import { derived, writable } from 'svelte/store';
+import { browser } from '$app/env';
+import { type Lang } from './utils/languageSetup';
+import de from './locales/de.json';
+import en from './locales/en.json';
 
-// ---------------------------------------------------------------------
-// Register locales
-// ---------------------------------------------------------------------
-register('en', () => import('./locales/en.json'));
-register('de', () => import('./locales/de.json'));
+const messages = { en, de };
 
-// ---------------------------------------------------------------------
-// Detect initial locale (SSR-safe)
-// ---------------------------------------------------------------------
-let initialLocale = 'en';
-
-if (browser) {
-	const savedLang = localStorage.getItem('lang');
-	const browserLang = getLocaleFromNavigator()?.split('-')[0];
-	initialLocale = savedLang || browserLang || 'en';
-}
-
-// ---------------------------------------------------------------------
-// Initialize synchronously for SSR
-// ---------------------------------------------------------------------
-init({
-	fallbackLocale: 'en',
-	initialLocale
+export const locale = writable<Lang>('en');
+export const currentLang = locale;
+// shortcut: supports dotted keys with plain strings only; add ICU formatting if copy needs placeholders.
+export const t = derived(locale, (lang) => (key: string) => {
+	let message: unknown = messages[lang];
+	for (const part of key.split('.')) {
+		if (typeof message !== 'object' || message === null) return key;
+		message = (message as Record<string, unknown>)[part];
+	}
+	return typeof message === 'string' ? message : key;
 });
 
-// Ensure locale is fully loaded before rendering (for SSR)
-await waitLocale();
+export function getPreferredLanguage(): 'en' | 'de' {
+	if (!browser) return 'en';
 
-// ---------------------------------------------------------------------
-// Store + helpers
-// ---------------------------------------------------------------------
-export const currentLang = writable<'en' | 'de'>(initialLocale as 'en' | 'de');
+	try {
+		const savedLang = localStorage.getItem('lang');
+		if (savedLang === 'en' || savedLang === 'de') return savedLang;
+	} catch {
+		// Language detection still works when browser storage is unavailable.
+	}
+
+	return navigator.language.split('-')[0] === 'de' ? 'de' : 'en';
+}
 
 export function setLang(l: 'en' | 'de') {
 	locale.set(l);
-	currentLang.set(l);
 	if (browser) {
-		localStorage.setItem('lang', l);
+		document.documentElement.lang = l;
+		try {
+			localStorage.setItem('lang', l);
+		} catch {
+			// Changing the current locale does not depend on persisting the preference.
+		}
 	}
 }
-
-// Keep stores in sync
-locale.subscribe((val) => {
-	if (val === 'en' || val === 'de') {
-		currentLang.set(val);
-	}
-});

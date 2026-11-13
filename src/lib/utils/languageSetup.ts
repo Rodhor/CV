@@ -1,4 +1,3 @@
-
 /**
  * ---------------------------------------------------------------------
  * Language setup
@@ -10,6 +9,6 @@
 export type Lang = keyof LocalizedString;
 
 export interface LocalizedString {
-  en: string;
-  de: string;
+	en: string;
+	de: string;
 }
