@@ -1,10 +1,11 @@
 <script>
 	import Main from '../components/Main.svelte';
+	import { t } from '../lib/i18n';
 </script>
 
 <svelte:head>
-	<title>Chris Nielsen - Portfolio</title>
-	<meta name="description" content="Portfolio of Chris Nielsen, self-taught developer." />
+	<title>{$t('meta.title')}</title>
+	<meta name="description" content={$t('meta.description')} />
 </svelte:head>
 
 <Main />

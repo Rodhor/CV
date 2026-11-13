@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { t } from 'svelte-i18n';
+	import { t } from '../lib/i18n';
 </script>
 
 <section id="introPage" class="grid grid-cols-1 gap-10 py-8 sm:py-14 lg:grid-cols-2">
@@ -18,7 +18,7 @@
 		</p>
 
 		<a
-			href="mailto: chris.rahbek.nielsen@gmail.com"
+			href="mailto:chris.rahbek.nielsen@gmail.com"
 			class="poppins group relative mx-auto cursor-pointer overflow-hidden rounded-full bg-white px-6 py-3 text-base text-slate-950 sm:text-lg md:text-xl lg:mr-auto lg:ml-0"
 		>
 			<div
@@ -30,10 +30,12 @@
 
 	<div class="relative grid place-items-center shadow-2xl">
 		<img
-			src="images/profile.jpg"
+			src="/images/profile.jpg"
 			alt="Chris Nielsen"
-			class="z-[2] max-h-[30vh] rounded-full object-cover"
-			loading="lazy"
+			width="800"
+			height="1002"
+			class="z-[2] h-auto max-h-[30vh] w-auto max-w-full rounded-full object-cover"
+			fetchpriority="high"
 		/>
 	</div>
 </section>

@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { getCompleteCV, type LocalizedEntry } from '$lib/data/cv';
-	import { type Lang } from '$lib/utils/languageSetup';
-	import { t, locale } from 'svelte-i18n';
+	import { getCompleteCV, type LocalizedEntry } from '../lib/data/cv';
+	import { type Lang } from '../lib/utils/languageSetup';
+	import { t, locale } from '../lib/i18n';
 
 	let cvEntries: LocalizedEntry[] = getCompleteCV('en');
 
@@ -9,9 +9,13 @@
 
 	// reactive reload when language changes
 	$: cvEntries = getCompleteCV($locale as Lang);
+
+	function entryKey(entry: LocalizedEntry, index: number) {
+		return `${entry.entryType}-${entry.startDate}-${index}`;
+	}
 </script>
 
-<section class="bg-slate-950 py-16 text-white" id="cv">
+<section class="py-16" id="cv">
 	<div class="container mx-auto px-4">
 		<!-- Header -->
 		<div class="mb-8 flex flex-col items-center justify-between gap-6 sm:flex-row">
@@ -23,7 +27,8 @@
 			<div class="flex items-center gap-3">
 				<span class="text-sm text-slate-400">{$t('cvSection.showShort')}</span>
 				<button
-					aria-label="toggle to switch between short or long descriptions"
+					type="button"
+					aria-label={$t('cvSection.toggleDescription')}
 					role="switch"
 					aria-checked={showLong}
 					on:click={() => (showLong = !showLong)}
@@ -42,7 +47,7 @@
 		</div>
 
 		<ul class="-my-4">
-			{#each cvEntries as entry (entry.organization + entry.timeframe)}
+			{#each cvEntries as entry, index (entryKey(entry, index))}
 				<li class="relative py-6">
 					<div class="grid grid-cols-1 gap-x-4 sm:grid-cols-[10rem_2.25rem_1fr]">
 						<!-- Col 1: Timeframe -->
@@ -87,6 +92,35 @@
 									{entry.descriptionShort}
 								{/if}
 							</p>
+
+							{#if showLong}
+								<div class="mt-3 space-y-2 text-sm text-slate-300">
+									{#if entry.location}
+										<p>
+											<span class="font-semibold text-slate-200">{$t('cvSection.location')}:</span>
+											{entry.location}
+										</p>
+									{/if}
+									{#if entry.entryType === 'education'}
+										<p>
+											<span class="font-semibold text-slate-200"
+												>{$t('cvSection.fieldOfStudy')}:</span
+											>
+											{entry.fieldOfStudy}
+										</p>
+									{/if}
+									{#if entry.highlights.length}
+										<div>
+											<p class="font-semibold text-slate-200">{$t('cvSection.highlights')}</p>
+											<ul class="mt-1 list-inside list-disc space-y-1">
+												{#each entry.highlights as highlight}
+													<li>{highlight}</li>
+												{/each}
+											</ul>
+										</div>
+									{/if}
+								</div>
+							{/if}
 						</div>
 					</div>
 				</li>

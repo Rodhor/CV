@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { t } from 'svelte-i18n';
+	import { t } from '../lib/i18n';
 
 	let benefits = [
 		{ nameKey: 'about.benefits.1.name', descriptionKey: 'about.benefits.1.description' },
@@ -15,11 +15,11 @@
 	<div
 		class="relative flex flex-col gap-2 py-4 text-center before:absolute before:top-0 before:left-0 before:h-1.5 before:w-2/3 before:bg-orange-700 after:absolute after:right-0 after:bottom-0 after:h-1.5 after:w-2/3 after:bg-orange-700"
 	>
-		<h6 class="text-lg sm:text-xl md:text-2xl">{$t('about.subtitle')}</h6>
-		<h3 class="text-3xl font-semibold sm:text-4xl md:text-5xl">
+		<p class="text-lg sm:text-xl md:text-2xl">{$t('about.subtitle')}</p>
+		<h2 class="text-3xl font-semibold sm:text-4xl md:text-5xl">
 			{$t('about.titleStart')}
 			<span class="poppins text-orange-400">{$t('about.titleHighlight')}</span>
-		</h3>
+		</h2>
 	</div>
 
 	<p class="poppins mx-auto max-w-[800px] text-lg font-semibold sm:text-xl md:text-2xl">
@@ -40,10 +40,10 @@
 		{/each}
 	</div>
 
-	<h5 class="poppins text-center text-2xl font-semibold sm:text-3xl">
+	<h3 class="poppins text-center text-2xl font-semibold sm:text-3xl">
 		{$t('about.footerTitleStart')}
 		<span class="poppins text-orange-400">{$t('about.footerTitleHighlight')}</span>
 		{$t('about.footerTitleEnd')}
-	</h5>
+	</h3>
 	<p class="mx-auto">{$t('about.footerText')}</p>
 </section>

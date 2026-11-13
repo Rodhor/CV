@@ -1,9 +1,9 @@
 <script lang="ts">
 	import StepModal from './stepModal.svelte';
 	import Step from './Step.svelte';
-	import { getProjectsByLanguage } from '$lib/data/projects';
-	import { type Lang } from '$lib/utils/languageSetup';
-	import { t, locale } from 'svelte-i18n';
+	import { getProjectsByLanguage } from '../lib/data/projects';
+	import { type Lang } from '../lib/utils/languageSetup';
+	import { t, locale } from '../lib/i18n';
 
 	let projects = getProjectsByLanguage('en');
 	let modalRef: any;
@@ -24,9 +24,9 @@
 
 <section id="projects" class="flex flex-col gap-20 py-5 lg:py-10">
 	<div class="flex flex-col gap-2 text-center">
-		<h3 class="text-3xl font-semibold sm:text-4xl md:text-5xl">
+		<h2 class="text-3xl font-semibold sm:text-4xl md:text-5xl">
 			{@html $t('projects.heading')}
-		</h3>
+		</h2>
 	</div>
 
 	<div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-10">

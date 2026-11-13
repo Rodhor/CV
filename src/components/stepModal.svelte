@@ -1,6 +1,8 @@
 <script lang="ts">
+	import { type LocalizedProject } from '../lib/data/projects';
+	import { t } from '../lib/i18n';
 	import { scale } from 'svelte/transition';
-	export let projects;
+	export let projects: LocalizedProject[];
 
 	let stepModal: HTMLDialogElement;
 	let isVisible = false;
@@ -48,6 +50,7 @@
 
 <dialog
 	bind:this={stepModal}
+	aria-labelledby="project-modal-title"
 	on:click={handleBackdropClick}
 	on:close={() => (isVisible = false)}
 	class="m-auto bg-transparent outline-none backdrop:backdrop-blur-sm focus:outline-none"
@@ -56,10 +59,13 @@
 		<!-- Modal Content -->
 		<div
 			in:scale={{ duration: SCALE_IN }}
-			class="relative z-10 max-w-2xl rounded-xl bg-slate-950 p-6 shadow-xl"
+			class="relative z-10 max-h-[90dvh] max-w-2xl overflow-y-auto rounded-xl bg-slate-950 p-6 shadow-xl"
 		>
 			<!-- Title -->
-			<h2 class="mb-4 text-xl font-bold text-white sm:text-2xl lg:text-3xl">
+			<h2
+				id="project-modal-title"
+				class="mb-4 text-xl font-bold text-white sm:text-2xl lg:text-3xl"
+			>
 				{projects[activeIndex].title}
 			</h2>
 
@@ -95,7 +101,9 @@
 
 			<!-- Close button -->
 			<button
+				type="button"
 				on:click={closeModal}
+				aria-label={$t('stepComponent.close')}
 				class="absolute top-3 right-3 rounded-full bg-gray-200 px-2 py-0.5 text-xs hover:bg-gray-300 sm:top-4 sm:right-4 sm:text-sm lg:text-base"
 			>
 				✕
