@@ -14,6 +14,7 @@
 		postgresql: 'postgresql.svg',
 		php: 'php.svg',
 		laravel: 'laravel.svg',
+		'c#': 'csharp.svg',
 		python: 'python.svg',
 		javascript: 'javascript.svg',
 		go: 'go.svg',
