@@ -4,6 +4,15 @@ A modern, multilingual portfolio built with **SvelteKit**, **Tailwind CSS**, and
 
 ---
 
+## Updating content
+
+Edit `src/lib/data/projects.json` and `src/lib/data/cv.json`; both files link to their JSON schemas for editor completion and validation. Add English and German text together, then run `npm run check` before building.
+
+```sh
+npm install
+npm run dev
+```
+
 ## ✨ Features
 
 - ⚡ **SvelteKit + Tailwind CSS** — modern, fast, responsive.
