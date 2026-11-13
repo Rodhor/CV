@@ -1,4 +1,5 @@
 {
+	"$schema": "./schemas/projects.schema.json",
 	"projects": [
 		{
 			"title": {
@@ -30,6 +31,94 @@
 				}
 			],
 			"icon": "fa-solid fa-briefcase"
+		},
+		{
+			"title": {
+				"en": "Tracker",
+				"de": "Tracker"
+			},
+			"descriptionShort": {
+				"en": "A local-first Rust desktop app for prioritized tasks, focused time tracking, session notes, and daily review.",
+				"de": "Eine lokale Rust-Desktop-App für priorisierte Aufgaben, Zeiterfassung, Sitzungsnotizen und Tagesrückblicke."
+			},
+			"descriptionLong": {
+				"en": "Tracker combines task management with a daily time log. Tasks can be sorted by urgency and importance, timed sessions can be paused and annotated, and a day-by-day review supports editing recorded times and notes. Data stays locally in a JSON file.",
+				"de": "Tracker verbindet Aufgabenverwaltung mit einer täglichen Zeiterfassung. Aufgaben lassen sich nach Dringlichkeit und Wichtigkeit sortieren, Sitzungen pausieren und mit Notizen versehen. In der Tagesübersicht können Zeiten und Notizen bearbeitet werden; die Daten bleiben lokal in einer JSON-Datei."
+			},
+			"technologies": ["Rust", "Iced", "JSON"],
+			"links": [
+				{
+					"label": "GitHub",
+					"url": "https://github.com/Rodhor/Tracker"
+				}
+			],
+			"icon": "fa-solid fa-list-check"
+		},
+		{
+			"title": {
+				"en": "KeywordAI",
+				"de": "KeywordAI"
+			},
+			"descriptionShort": {
+				"en": "A desktop tool that uses AI to assess keyword lists and group relevant terms into campaign themes.",
+				"de": "Eine Desktop-Anwendung, die Keyword-Listen mithilfe von KI bewertet und relevante Begriffe zu Kampagnenthemen gruppiert."
+			},
+			"descriptionLong": {
+				"en": "KeywordAI imports keyword data from CSV, cleans it, evaluates relevance against a campaign description with Google Gemini, and clusters the results into ad-group themes. The desktop app is built with Go and Wails, with a Svelte interface; it is an ongoing project.",
+				"de": "KeywordAI importiert Keyword-Daten aus CSV-Dateien, bereinigt sie, bewertet ihre Relevanz anhand einer Kampagnenbeschreibung mit Google Gemini und gruppiert die Ergebnisse in Anzeigengruppen. Die Desktop-Anwendung basiert auf Go und Wails mit einer Svelte-Oberfläche und wird weiterentwickelt."
+			},
+			"technologies": ["Go", "Wails", "Svelte", "Gemini API", "CSV"],
+			"links": [
+				{
+					"label": "GitHub",
+					"url": "https://github.com/Rodhor/KeywordAI"
+				}
+			],
+			"icon": "fa-solid fa-wand-magic-sparkles"
+		},
+		{
+			"title": {
+				"en": "rs-toolkit",
+				"de": "rs-toolkit"
+			},
+			"descriptionShort": {
+				"en": "A Rust workspace with configurable tools for exporting Excel sheets to CSV and renaming files in batches.",
+				"de": "Ein Rust-Workspace mit konfigurierbaren Tools zum Export von Excel-Tabellen als CSV und zum Umbenennen mehrerer Dateien."
+			},
+			"descriptionLong": {
+				"en": "The workspace contains an Excel handler that reads workbooks, cleans cell values, and exports sheets to CSV, plus a file renamer with include/exclude patterns, selectable sort order, and numbered names. Shared crates provide configuration and logging. The renamer can copy originals to a timestamped directory before it changes names.",
+				"de": "Der Workspace enthält einen Excel-Handler, der Arbeitsmappen einliest, Zellwerte bereinigt und Tabellenblätter als CSV exportiert, sowie einen Dateiumbenenner mit Ein- und Ausschlussmustern, wählbarer Sortierung und nummerierten Dateinamen. Gemeinsame Crates stellen Konfiguration und Logging bereit. Vor dem Umbenennen kann das Tool Originale in ein Verzeichnis mit Zeitstempel kopieren."
+			},
+			"technologies": ["Rust", "Cargo Workspace", "Calamine", "CSV", "TOML"],
+			"links": [
+				{
+					"label": "GitHub",
+					"url": "https://github.com/Rodhor/rs-toolkit"
+				}
+			],
+			"icon": "fa-solid fa-screwdriver-wrench"
+		},
+		{
+			"title": {
+				"en": "DiagnosticToolkit",
+				"de": "DiagnosticToolkit"
+			},
+			"descriptionShort": {
+				"en": "A configurable Go CLI for TCP, DNS, and ICMP checks, one-off reports, and continuous network monitoring.",
+				"de": "Ein konfigurierbares Go-CLI für TCP-, DNS- und ICMP-Prüfungen, Einzelberichte und kontinuierliche Netzwerküberwachung."
+			},
+			"descriptionLong": {
+				"en": "Netcheck runs configured TCP connection, DNS, and ping checks, applies latency and packet-loss thresholds, and can discover the machine gateway and DNS resolvers. It runs once or continuously and writes console summaries, JSON Lines results, and a JSON run summary. Targets and intervals are configured in YAML.",
+				"de": "Netcheck führt konfigurierte TCP-Verbindungs-, DNS- und Ping-Prüfungen durch, wendet Schwellenwerte für Latenz und Paketverlust an und kann Gateway sowie DNS-Resolver des Systems erkennen. Es läuft einmalig oder fortlaufend und erstellt Konsolenzusammenfassungen, JSON-Lines-Ergebnisse und einen JSON-Bericht. Ziele und Intervalle werden in YAML konfiguriert."
+			},
+			"technologies": ["Go", "YAML", "TCP", "DNS", "ICMP"],
+			"links": [
+				{
+					"label": "GitHub",
+					"url": "https://github.com/Rodhor/DiagnosticToolkit"
+				}
+			],
+			"icon": "fa-solid fa-network-wired"
 		},
 		{
 			"title": {
@@ -125,91 +214,47 @@
 		},
 		{
 			"title": {
-				"en": "Friends App",
-				"de": "Friends App"
+				"en": "PriceHike",
+				"de": "PriceHike"
 			},
 			"descriptionShort": {
-				"en": "A CRUD app for managing friends, built with a separate frontend and backend.",
-				"de": "Eine CRUD-App zur Verwaltung von Freunden, erstellt mit getrenntem Frontend und Backend."
+				"en": "A desktop app for previewing and applying configurable price rules to CSV and Excel datasets.",
+				"de": "Eine Desktop-App, um konfigurierbare Preisregeln auf CSV- und Excel-Daten anzuwenden und Änderungen vorab zu prüfen."
 			},
 			"descriptionLong": {
-				"en": "This was my first project with a real frontend–backend separation. I built a functional CRUD application for managing friends. While I started it from a tutorial, I extended it further than that. It gave me valuable experience integrating a JavaScript frontend with a Python backend.",
-				"de": "Dies war mein erstes Projekt mit einer echten Trennung von Frontend und Backend. Ich habe eine funktionale CRUD-Anwendung zur Verwaltung von Freunden erstellt. Ich habe das Projekt aus einem Tutorial heraus begonnen, es aber darüber hinaus weiterentwickelt. Dadurch konnte ich wertvolle Erfahrungen bei der Integration eines JavaScript-Frontends mit einem Python-Backend sammeln."
+				"en": "PriceHike loads CSV or Excel data and applies ordered rules based on item-number patterns or price thresholds. Rules can add or subtract fixed amounts or percentages, round values, and control decimal precision. A preview reports affected rows and rule counts before the result is exported as CSV or XLSX.",
+				"de": "PriceHike lädt CSV- oder Excel-Daten und wendet Regeln anhand von Artikelnummern-Mustern oder Preisschwellen an. Regeln können feste Beträge oder Prozentsätze addieren beziehungsweise abziehen, Werte runden und die Dezimalstellen festlegen. Eine Vorschau zeigt betroffene Zeilen und Regelstatistiken, bevor das Ergebnis als CSV oder XLSX exportiert wird."
 			},
-			"technologies": ["JavaScript", "React", "Python", "SQLite"],
+			"technologies": ["Go", "Wails", "Svelte", "TypeScript", "Excelize"],
 			"links": [
 				{
 					"label": "GitHub",
-					"url": "https://github.com/Rodhor/FriendsApp"
+					"url": "https://github.com/Rodhor/PriceHike"
 				}
 			],
-			"icon": "fa-solid fa-user-group"
+			"icon": "fa-solid fa-tags"
 		},
 		{
 			"title": {
-				"en": "WordTemplate Script",
-				"de": "WordTemplate Script"
+				"en": "Rust_NTG",
+				"de": "Rust_NTG"
 			},
 			"descriptionShort": {
-				"en": "A lightweight script for filling Word templates with data from Excel.",
-				"de": "Ein Skript zum Ausfüllen von Word-Vorlagen mit Daten aus Excel."
+				"en": "An early-stage Rust API for controlled file operations between a local workspace and an SFTP server.",
+				"de": "Eine Rust-API in früher Entwicklungsphase für kontrollierte Dateioperationen zwischen lokalem Arbeitsverzeichnis und SFTP-Server."
 			},
 			"descriptionLong": {
-				"en": "This script was a lightweight spinoff of DocsAutomation, which I used in another team. Instead of a GUI, it read data directly from an Excel file and filled Word templates accordingly. It was much simpler, but it kept the core idea of automating repetitive document work.",
-				"de": "Dieses Skript war eine Abwandlung von DocsAutomation, die ich in einem anderen Stiftungsprojekt eingesetzt habe. Anstelle einer GUI las es Daten direkt aus einer Excel-Datei und füllte entsprechende Word-Vorlagen aus. Es war deutlich simpler, behielt aber die Kernidee der Automatisierung repetitiver Dokumentarbeiten bei."
+				"en": "The Axum service provides SFTP directory and file operations, including upload, download, move, archive, and delete. It uses host-key verification, path checks, and a bounded session pool. PostgreSQL connectivity and health reporting are present; CSV and broader workflow endpoints remain in progress. There is no browser UI.",
+				"de": "Der Axum-Service bietet SFTP-Operationen für Verzeichnisse und Dateien, darunter Upload, Download, Verschieben, Archivieren und Löschen. Er verwendet Host-Key-Prüfung, Pfadvalidierung und einen begrenzten Session-Pool. PostgreSQL-Anbindung und Health-Check sind vorhanden; CSV- und weiterführende Workflow-Endpunkte befinden sich noch in Arbeit. Eine Browser-Oberfläche gibt es nicht."
 			},
-			"technologies": ["Python"],
+			"technologies": ["Rust", "Axum", "SFTP", "PostgreSQL", "SQLx"],
 			"links": [
 				{
 					"label": "GitHub",
-					"url": "https://github.com/Rodhor/WordTemplateScript"
+					"url": "https://github.com/Rodhor/Rust_NTG"
 				}
 			],
-			"icon": "fa-solid fa-file-word"
-		},
-		{
-			"title": {
-				"en": "Golang Project Automation",
-				"de": "Golang Project Automation"
-			},
-			"descriptionShort": {
-				"en": "A paused in-progress project automation tool built in Go, aiming for distributable executables with embedded filestructure templates.",
-				"de": "Ein pausiertes, noch in Arbeit befindliches Projektautomatisierungstool in Go, das verteilbare ausführbare Dateien mit eingebetteten Vorlagen bereitstellen soll."
-			},
-			"descriptionLong": {
-				"en": "This is the most ambitious version of my Project Automation series, written in Go. The goal is to embed YAML-defined folder structures, complete with files and package installs, into a distributable executable. That way teams could share consistent setups for Python and Go projects. The project is currently paused: folder creation works, but command execution and file injection are not finished. I may rewrite it from scratch with a different approach.",
-				"de": "Dies ist die ambitionierteste Version meiner Automatisierungsreihe, geschrieben in Go. Ziel ist es, YAML-definierte Ordnerstrukturen, einschließlich Dateien und Paketinstallationen, in eine verteilbare Anwendung einzubetten. Auf diese Weise könnten Teams konsistente Setups für Python- und Go-Projekte teilen. Das Projekt ist derzeit pausiert: Die Ordnererstellung funktioniert, aber die Befehlsausführung und Dateiinjektion sind noch nicht abgeschlossen. Ich plane eventuell eine komplette Neuauflage mit einem anderen Ansatz."
-			},
-			"technologies": ["Go", "YAML"],
-			"links": [
-				{
-					"label": "GitHub",
-					"url": "https://github.com/Rodhor/GolangProjectAutomation"
-				}
-			],
-			"icon": "fa-solid fa-gears"
-		},
-		{
-			"title": {
-				"en": "CDP",
-				"de": "CDP"
-			},
-			"descriptionShort": {
-				"en": "A Bashscript to streamline navigating project directories and opening them in VSCode.",
-				"de": "Ein Bashskript zur Vereinfachung der Navigation durch Projektverzeichnisse und zum Öffnen in VSCode."
-			},
-			"descriptionLong": {
-				"en": "CDP is a small Bash productivity tool I wrote to make it easier to navigate nested project structures. It lets me quickly move into project folders and open them directly in VSCode. I used it as part of my daily workflow to remove friction and speed up navigation.",
-				"de": "CDP ist ein kleines Bash-Produktivitätstool, das ich geschrieben habe, um die Navigation in verschachtelten Ordnerstrukturen zu erleichtern. Es ermöglicht mir, schnell in Projektordner zu wechseln und diese direkt in VSCode zu öffnen. Ich habe es in meinem täglichen Workflow genutzt, um die Navigation zu beschleunigen."
-			},
-			"technologies": ["Bash"],
-			"links": [
-				{
-					"label": "GitHub",
-					"url": "https://github.com/Rodhor/CDP"
-				}
-			],
-			"icon": "fa-solid fa-terminal"
+			"icon": "fa-solid fa-right-left"
 		}
 	]
 }
